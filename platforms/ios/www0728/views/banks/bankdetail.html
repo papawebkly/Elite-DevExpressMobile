@@ -1,0 +1,56 @@
+<div data-options="dxView : { name: 'bankdetail', title: 'Your Bank Account' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view spouse iconSet-container" data-bind="dxScrollView: { }">
+        	<div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">Bank Name: </div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: int_account_name, readOnly: readonly }"></div>  
+                </div>
+				<!-- ko if:final_bank_location_code() == 'USA' || final_bank_location_code() == 'CAN' -->
+	                <div class="dx-field">
+	                    <div class="dx-field-label nl-field-label">Rounting #:</div>
+	                    <div class="dx-field-value" data-bind=" dxTextBox: { value: int_aba_routingno, readOnly: readonly }"></div>  
+	                </div>
+				<!-- /ko -->
+				<!-- ko if: final_bank_location_code() != 'USA' && final_bank_location_code() != 'CAN' -->
+	                <div class="dx-field">
+	                    <div class="dx-field-label nl-field-label">SWIFT Code:</div>
+	                    <div class="dx-field-value" data-bind=" dxTextBox: { value: final_swift_code, readOnly: readonly }"></div>  
+	                </div>
+	                <div class="dx-field">
+	                    <div class="dx-field-label nl-field-label">IBAN:</div>
+	                    <div class="dx-field-value" data-bind=" dxTextBox: { value: final_iban, readOnly: readonly }"></div>  
+	                </div>
+				<!-- /ko -->
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">Account #:</div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: final_account_name, readOnly: readonly }"></div>  
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">Name on Account:</div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: name_onaccount, readOnly: readonly }"></div>  
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">Used For</div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: used_for, readOnly: readonly }"></div>  
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">Account Type</div>
+                    <div class="dx-field-value" data-bind="dxLookup: { dataSource: accountTypes, value: account_type_code, displayValue: account_type, valueExpr: 'code', displayExpr: 'display_value', title: 'Account Types', placeholder: 'Select...', disabled: readonly }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">Account Location</div>
+                    <div class="dx-field-value" data-bind="dxLookup: { dataSource: accountLocations, value: account_location_code, displayValue: account_location, valueExpr: 'code', displayExpr: 'display_value', title: 'Account Bank Locations', placeholder: 'Select...', disabled: readonly }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">Account Currency</div>
+                    <div class="dx-field-value" data-bind="dxLookup: { dataSource: currencies, value: currency_code, displayValue: currency, valueExpr: 'code', displayExpr: 'currency_name', title: 'Currencies', placeholder: 'Select...', disabled: readonly }"></div>
+                </div>
+            </div>
+			<center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' Save Bank Account', clickAction: updateBankAccount, visible: updatable}"></div>
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' Delete Bank From EliteMobile', clickAction: removeBankAccount, visible: 1}"></div>
+			</center>
+        </div>
+    </div>
+</div>

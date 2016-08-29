@@ -1,0 +1,67 @@
+<div data-options="dxView : { name: 'expensereportdetail_notsubmitted', title: '' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div id="expensereportdetail_notsubmittedpage" class="home_view  login_view spouse iconSet-container" data-bind="dxScrollView: { }">
+            <!-- ko if: status() != 'pending' && has_expenseitems() == true -->
+	            <div class="separation-bar"></div>
+	           	<center class="elite-btnwrapper">
+					<div class="elite-greenbtn" data-bind="dxButton: { text: 'Submit Report', clickAction: submit_expensereport }"></div>
+	            </center>
+	            <div class="separation-bar"></div>
+            <!-- /ko -->            
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Description:</div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: title, readOnly: readonly } "></div>
+                </div>
+				<div class="dx-field">
+					<div class="dx-field-label">Currency</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: currencies, value: currency_code, displayValue: currency, valueExpr: 'code', displayExpr: 'currency_name', title: 'Currencies', placeholder: 'Select...', disabled: readonly }"></div>
+				</div>                
+                <div class="dx-field">
+                    <div class="dx-field-label">Date From:</div>
+                    <div class="dx-field-value" data-bind=" dxDateBox: { value: date_from, format: 'date', readOnly: readonly } "></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Date To:</div>
+                    <div class="dx-field-value" data-bind=" dxDateBox: { value: date_to, format: 'date', readOnly: readonly } "></div>
+                </div>
+				<div class="dx-field">
+                    <div class="dx-field-label">Status:</div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: status, readOnly: true } "></div>
+                </div>
+            </div>
+            <div class="separation-bar"></div>
+			<div class="outstanding dx-fieldset nl-fieldset">
+                <div class="dx-field">
+                    <div class="ribbon dx-field-label nl-field-label" style="width:100% !important">Related Expense Items</div>
+                </div>
+            </div>
+	        <div data-bind="dxList: { dataSource: expenseitems_list, pullRefreshEnabled: true }">
+	            <div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" data-bind="dxAction: '#expenseitemcapture/{id}'" >
+               		<div class="info-row" data-bind="text: $data.vendor_name" ></div>
+	                <div class="info-row">
+	                	<span data-bind="text: $data.expense_amount"></span> <span data-bind="text: $data.currency_id"></span>
+	                </div>
+	                <div class="info-row" data-bind="text: $data.expense_date" ></div>
+	            </div>
+	        </div>        
+	        <!-- ko if: (id() > 0 && status() != 'pending') || (id() == 0) -->
+	  	        <div class="separation-bar"></div>
+	          	<center class="elite-btnwrapper">
+					<div class="elite-newbtn" data-bind="dxButton: { text: btn_txt, clickAction: update_expensereport, visible: updatable}"></div>
+	            </center>
+            <!-- /ko -->
+			<!-- ko if: status() != 'pending' -->
+	            <!-- ko if: id() > 0 -->
+	            	<!-- ko if: updatable() == true -->
+	  	        		<div class="separation-bar"></div>
+	  	        	<!-- /ko -->
+	  	        <!-- /ko -->
+	          	<center class="elite-btnwrapper">
+					<div class="elite-newbtn" data-bind="dxButton: { text: 'DELETE REPORT', clickAction: delete_expensereport, visible: deletable}"></div>
+	            </center>
+	            <div class="separation-bar"></div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>

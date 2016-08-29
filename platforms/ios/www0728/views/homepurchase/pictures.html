@@ -1,0 +1,16 @@
+<div data-options="dxView : { name: 'hoepurchasedetail_pictures', title: 'Pictures'} ">
+    <div class="notes-page" data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div class="top_description">4MB size limit</div>
+    	<div id="pictureslist" data-bind="dxList: { dataSource: pictureslist_data, pullRefreshEnabled: true, height: setHeight }">
+            <div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" >
+  				<img src="img/Remove@2x.png" class="remove_pic" data-bind="attr:{id: $data.id}, click: $parent.remove_pic" style="width:28px;position: absolute; margin: 0 15px;" />
+        		<div class="note-row">
+        			<div class="info-row" style="margin-left: 70px">
+        				<img data-bind="attr: {src: $data.thumb_url}" style="max-height:100px"/>
+        			</div>
+        		</div>
+	        </div>
+ 		</div>
+ 		<div data-bind="dxActionSheet: { dataSource: actionSheetPictureData, showTitle: false, visible: actionSheetVisible }"></div>
+ 	</div>
+</div>

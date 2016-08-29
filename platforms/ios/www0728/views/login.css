@@ -1,0 +1,150 @@
+.login_view {	
+	   /* background: url(../img/login-bg.png);
+		background-size:100% 100%;*/
+       background:transparent !important;
+}
+.login_view .dx-fieldset .dx-field-label {
+	float: left;
+	width: 35%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display:inline;
+}
+.dx-theme-ios.dx-version-major-7 .login_view .dx-fieldset .dx-field-value {
+	float: right;
+	width: 60%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: 0;
+}
+.dx-theme-ios7 .login_view .dx-fieldset {
+	margin: -10px 20px 0 20px;
+	width: auto;
+	border:0px solid;
+	border-radius:2px !important;
+	display:inline;
+	background:transparent !important;
+}
+.login_view .dx-field{
+	padding: 0px;
+    border-bottom: 1px solid transparent !important;
+	background:white;
+	margin-left: 20px;
+    margin-right: 20px;
+}
+.login_view .dx-field .dx-texteditor-input
+{
+	background:white;	
+}
+.login_view .dx-field:last-child
+{
+    border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-bottom:1px solid #ffc222 !important;
+}
+.login_view .dx-field:first-child
+{
+	margin-top:0px;
+    border-top-right-radius: 2px;
+	border-bottom:1px solid #f7de9d !important
+}
+
+.login_view .dx-field img{
+	width:20%;
+	float:left;
+}
+.login_view .description {
+	background: transparent;
+	padding: 0px 0 0px 20px;
+	text-align: left;
+	color: #111111;
+}
+.login_view .description img{
+	width:20%;
+	display:inline;
+}
+.login_view .description h2{
+	font-size: 16px;
+	display:inline;
+	color:white;
+	margin-bottom:10px;
+	margin-left:10px;
+	position:relative;
+	bottom:5px;
+}
+.login_view .btn-area {
+    height: 100%;
+    width: 100%;
+    display: block;
+	margin-top: -15px;
+}
+.login_view .login-btn { 
+	margin-top: 0px;
+	background: transparent url('../img/new/login-btn.png');
+	background-size:100% 100%;
+	border-bottom: 0px solid transparent !important;
+	height:50px;
+}
+.footer-bar{
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	border-top: 0px solid transparent;
+	background-color: transparent;
+    padding-bottom:5px;
+}
+#login_page .dx-field-value{
+	width: 80%;
+	position:relative;
+	top:12px;
+}
+
+.login-bg-page{
+	background: url(../img/login-bg.png);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+    transition: none;
+    top:0;
+}
+.layout-content{
+	background: transparent !important;     
+}
+.login-help
+{
+	background:url(../img/new/help.png);
+	background-size:25px 25px;
+	background-repeat: no-repeat;
+	width: 25px;
+    height: 25px;
+    position: relative;
+    /* bottom: 43px; */
+    margin-right: 10px;
+    /* display: inline; */
+    /* left: 44%; */
+    right: 10px;
+    position: relative;
+    float: right;
+}
+.forgort-btn{
+	color:white;
+}
+.contactus .dx-button-text{
+	text-decoration: underline !important;
+	font-size:16px;
+}
+.contactus.dx-button{
+	background:transparent !important;
+	color:white;
+	border:0px solid;
+	font-family: sans-serif;
+	font-weight:200;
+}
+.forgotbtn.dx-button{
+	background:transparent !important;
+	color:white;
+	border:0px solid;
+	font-family: sans-serif;	
+	font-weight: 200;
+}

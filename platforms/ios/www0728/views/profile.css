@@ -1,0 +1,159 @@
+.profile-photo{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #46166B;
+    margin: 20px auto 0;
+}
+	.profile-photo img{
+		width: 100px;
+		cursor: pointer;
+	}
+/*	
+#profile_photo {
+    width: 100px;
+    cursor: pointer;
+}*/
+.profilephoto_addlink {
+	margin-top: 18px;
+}
+.profile_fullname{
+    padding: 15px 0px;
+}
+.profile_links{
+	/*padding-left: 15px;*/
+	border-bottom: 1px solid #dddddd;
+}
+.profile_links .dx-list-item{
+	border-bottom: 1px solid #dddddd;
+}
+.profile_links .dx-list-item:last-child{
+	border-bottom: none;
+}
+.pad-bot{
+	margin-bottom: 30px;
+}
+
+.link-caption {
+    margin-left: 45px;
+    top: 50%;
+    position: absolute;
+    margin-top: -10px;
+    /*
+	float: left;
+	margin-left: 15px;
+	margin-top: 4px;*/
+}
+.profilelink-caption{
+	margin-left: 55px !important;
+}
+.linkicon-wrapper{
+	float: left;
+	width: 55px;
+}
+.profile-linkicon{
+    max-width: 50px;
+    max-height: 50px;
+    padding: 0 0 10px;
+    margin: 0 auto;
+    display: block;
+}
+.link-icon {
+	float: left;
+    max-width: 50px;
+    max-height: 50px;
+    padding: 0 0 10px
+}
+.profile_links .dx-list-item {
+	padding-left: 0;
+}
+
+/* --- Profile Spouse --- */
+select.combobox {
+	max-width: 100%;
+	font-size: 10pt;
+	height: 20px;
+	margin: 8px 0;
+}
+.dx-theme-ios.dx-version-major-7 .login_view.spouse .dx-fieldset .dx-field-label{
+	width: 35%;
+}
+.dx-theme-ios.dx-version-major-7 .login_view.spouse .dx-fieldset .dx-field-value{
+	width: 60%;
+}
+
+/* --- Profile Dependents --- */
+.dependent_photo{
+	width: 40px;
+}
+.circle-photo-wrapper{
+	width: 40px; 
+	height: 40px;
+	border: 2px solid #46166B;
+	border-radius: 50%;
+	margin-right: 10px;
+	border-style: solid !important;
+	margin-top: 5px;
+	background-color: white;
+	overflow: hidden;
+}
+.circle-pic-wrapper{
+	width: 48px;
+	height: 48px;
+	margin-right: 6px;
+	margin-top: 1px;
+	background-color: white;
+	overflow: hidden;
+}
+	.circle-pic-wrapper .dependent_photo{
+		width: 48px !important;
+	}
+.info-row{
+	margin-top: 5px;
+}
+
+/* --- Profile Contacts --- */
+	.profile_contacts_icon{
+		/*float: left;
+		margin: 15px;*/
+		position: absolute !important;
+		top: 50%;
+		margin-top: -15px;		
+	}
+
+/* --- Profile Mailing Address --- */
+	.listicon-margin{
+		margin: 15px 15px 15px 0;
+	}
+	.mailingaddress_detailview .resource_icon{
+		margin: 12px 15px;
+	}
+	.mailingaddress_detailview .contact_title:last-child{
+		margin-bottom: 10px;
+	}
+
+.dx-theme-ios7 .dx-lookup.dx-state-disabled .dx-lookup-field:before{
+	border-top: none;
+	border-right: none;
+}
+.dx-theme-ios.dx-version-major-7 .dx-lookup-popup-wrapper.dx-overlay-wrapper{
+	/*Put some space between the clock & title bar. */
+	/*margin-top: 20px;*/
+}
+.mid-caps{
+	float: left;
+	margin-left: 50px;
+}
+.square-photo{
+	border-radius: 0%;
+}
+.info-row.last{
+	margin-bottom: 10px;
+}
+.nodata-message{
+	color: #8e8e93;
+	text-align: center;
+	padding: 52px 15px;
+	font-size: 100%;
+}

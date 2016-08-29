@@ -1,0 +1,18 @@
+<div data-options="dxView : { name: 'homepurchase', title: 'Home Search',  } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+	        <div class="properties_list gray_border_bar" data-bind="dxList: { dataSource: properties_list, pullRefreshEnabled: true, contentReadyAction:  contentReady }">
+	        	<div data-options="dxTemplate : { name: 'item' } "  data-bind="dxAction: '#homepurchasedetail/{id}'" class="nl-list-item" >
+	        		<div class="left-area">
+			       		<div class="font1" data-bind="{text: nickname}"></div>
+			       		<div class="font2 purple-color" data-bind="{text: address_line_1}"></div>
+			       		<div class="font2 purple-color" data-bind="{text: address_line_2}"></div>
+		       		</div>
+		       		<div class="right-area" style="margin-top: 0px">
+						<input type="ranger" min="0" max="3" data-bind="attr: { value: rating, id: 'backing'+id }" step="0.5" style="display:none">
+						<div class="bigstars rateit" data-bind="attr: { 'data-rateit-backingfld': '#backing'+id }" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+		       		</div>
+		        </div>
+	        </div>    
+        <!--/div-->
+    </div>    
+</div>

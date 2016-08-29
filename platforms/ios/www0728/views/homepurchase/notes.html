@@ -1,0 +1,16 @@
+<div data-options="dxView : { name: 'hoepurchasedetail_notes', title: 'Notes'} ">
+	<div data-bind="dxCommand: { id: 'back', title: 'Back', action: goBack, type:'back' }"/>
+    <div class="notes-page" data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div data-bind="dxList: { dataSource: noteslist_data, pullRefreshEnabled: true }">
+        	<div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#hoepurchasedetail_notedetail/{id}'" class="nl-list-item" >
+  				<img src="img/Notepad.png" style="position: absolute; margin: 15px;" />
+        		<div class="note-row">
+        			<div class="info-row" data-bind="text: $data.comment"></div>
+        			<div class="info-row">
+        				<span data-bind="text: $data.created_at"></span>
+        			</div>
+        		</div>
+        	</div>       
+ 		</div>
+ 	</div>
+</div>

@@ -1,0 +1,57 @@
+.jobpage-subheader{
+	font-size: 18px;
+	background: white;
+	color: #111111;
+	margin: 5px 10px;
+}
+.value-field{
+	padding-top: 8px !important;
+}
+.changerelocation-header-bg
+{
+	background:#6b4f88 !important;
+}
+.changerelocation-body-bg
+{
+
+}
+.destination_view .dx-field
+{
+	background:transparent !important;
+	margin:0 30px 0 30px;
+    border-bottom: 1px solid #b7b6bb;
+
+}
+.destination_view .dx-fieldset {
+	margin: -10px 10px 0 10px !important;
+	width: auto;
+	border:0px solid;
+	border-radius:2px !important;
+	background:transparent !important;
+}
+.destination_view .dx-field:last-child {
+    border-bottom: 1px solid #b7b6bb;
+}
+.destination-logout
+{
+    background: url(../img/new/logoutbtn.png);
+    width: 20%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position:relative;
+    top:100px;
+}
+.destination-logout .dx-button-content
+{
+	min-height:100px;
+}
+.destination_view .dx-dropdownlist-popup-wrapper .dx-scrollview-content
+{
+    position: static;
+    overflow: hidden;
+    font-size: 14px !important;
+}
+.destination_view .dx-scrollable-content
+{
+    background: #e7e7e7 !important;
+}

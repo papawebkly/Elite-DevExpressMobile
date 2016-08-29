@@ -1,0 +1,67 @@
+<div data-options="dxView : { name: 'realestate', title: '',  } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="iconSet-container" data-bind="dxScrollView: { }">
+        	<div class="realestate-page realestates" id="realestate0">
+		        <div class="combine_singlerow">
+		        	<p class="resource_title">Your Home Sale Agent</p>
+		            <img src="img/purple_avatar.png" class="avatar-mini" />
+		            <div class="resource_name" data-bind="text: seller_name"></div>
+		            <div class="resource_desc" data-bind="text: seller_address"></div>
+		            <div class="contact-btn">
+		            	<div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: '' }"></div>
+		            	<div class="button nl-field-icon" data-bind="dxButton: { icon: 'email', onClick: '' }"></div>
+		            </div>
+		        </div>
+		        <div id="contact_header">
+		            <img src="img/Home.png" class="home-icon" />
+		            <div class="ribbon" >Home Sale</div>
+		            <div class="contact_title" data-bind="text: address_line_1"></div>
+		            <div class="contact_title" data-bind="text: address_line_2() + ' ' + city_country() "></div>
+		        </div>    
+		        <div class="dx-fieldset nl-fieldset">		        	
+		            <div class="dx-field">
+		            	<div class="dx-field-icon"><img src="img/current_list.png" /></div>
+		                <div class="dx-field-label">Current List:</div>
+		                <div class="dx-field-value" data-bind="text:current_list"></div>
+		            </div>
+
+		            <div class="dx-field">
+		            	<div class="dx-field-icon"><img src="img/days_onmarket.png" /></div>
+		                <div class="dx-field-label">Days on Market:</div>
+		                <div class="dx-field-value" data-bind="text:days_onmarket"></div>
+		            </div>
+		        </div>
+				<div id="realstate_map" data-bind="dxMap:map_options"></div>
+        	</div>
+        	
+        	<div class="realestate-page realestates" id="realestate1">
+		        <div class="combine_singlerow">
+		        	<p class="resource_title">Your Home Purchase Agent</p>
+		            <img src="img/purple_avatar.png" class="avatar-mini" />
+		            <div class="resource_name" data-bind="text: buyer_name"></div>
+		            <div class="resource_desc" data-bind="text: buyer_address"></div>
+		            <div class="contact-btn">
+		            	<div class="button" data-bind="dxButton: { icon: 'tel', onClick: '' }"></div>
+		            	<div class="button" data-bind="dxButton: { icon: 'email', onClick: '' }"></div>
+		            </div>
+		        </div>
+		        <div class="page-label font2">
+        			Your Saved Properties
+        		</div>
+		        <div class="properties_list gray_border_bar" data-bind="dxList: { dataSource: properties_list, scrollingEnabled: false, itemClickAction: '#homepurchasedetail' }">
+		        	<div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" >
+		        		<div class="left-area">
+				       		<div class="font1" data-bind="{text: name}"></div>
+				       		<div class="font2 purple-color" data-bind="{text: location1}"></div>
+				       		<div class="font2 purple-color" data-bind="{text: location2}"></div>
+			       		</div>
+			       		<div class="right-area">
+							<input type="ranger" min="0" max="3" data-bind="attr: { value: marks, id: 'backing'+index }" step="0.5" style="display:none">
+							<div class="bigstars rateit" data-bind="attr: { 'data-rateit-backingfld': '#backing'+index }"></div>
+			       		</div>
+			        </div>
+		        </div>       
+        	</div>
+        </div>
+    </div>    
+</div>

@@ -1,0 +1,15 @@
+.expenseitem_desc{
+	background: white;
+	margin-bottom: 10px;
+	padding: 10px;
+	color: #46116B;
+	text-align: center;
+}
+#expenseitem_desc1{
+	display: none;
+}
+
+.dx-list.no-listarrow .dx-list-item:before{
+	border-top: none !important;
+	border-right: none !important;
+}

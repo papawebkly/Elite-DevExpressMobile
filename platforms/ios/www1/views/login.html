@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'login', title: 'BRISTOL Elite Mobile™'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div id="login_page" class="login_view iconSet-container" data-bind="dxScrollView: {}">
+        	<div class="description">
+        		<h2>Log in to Your Account</h2>
+        		<h3>Enter your Email and Password to log in.</h3>
+        	</div>
+			<div class="dx-fieldset">
+				<div class="dx-field">    
+					<!--div class="dx-field-label">Email</div-->    
+					<div class="dx-field-value login-input" data-bind=" dxTextBox: { value: email, placeholder: 'Enter email' }"></div>
+				</div>
+				<div class="dx-field">
+					<!--div class="dx-field-label">Password</div-->
+					<div class="dx-field-value login-input" data-bind=" dxTextBox: { mode: 'password', value: password, placeholder: 'Enter password' }"></div>  
+				</div>				
+			</div>
+			<div class="btn-area">
+				<center><div class="elite-newbtn login-btn" data-bind="dxButton: { text: 'LOG IN', clickAction: login }"></div></center>
+                <!--div style="display:block; position:absolute; background: #f6f6f6 url('img/login_bg.png') center 1px no-repeat; height:100%; width:100%">
+                </div-->
+			</div>
+		</div>
+		
+		<div class="footer-bar">
+			<div class="left" data-bind="dxButton: { text: 'Forgot Password', clickAction: go_forgotpwd }"></div>
+			<div class="right" data-bind="dxButton: { text: 'Help', clickAction: '#help' }"></div>
+		</div>
+	</div>		
+</div>

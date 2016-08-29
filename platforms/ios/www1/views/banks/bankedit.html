@@ -1,0 +1,24 @@
+<div data-options="dxView : { name: 'bankedit', title: 'New Bank Account'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view spouse iconSet-container" data-bind="dxScrollView: { }">
+        	<div class="dx-fieldset">
+				<div class="dx-field">
+					<div class="dx-field-label">Bank Name:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: account_name }"></div>  
+				</div>	        	
+				<div class="dx-field">
+					<div class="dx-field-label">Bank Location:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: bankLocations, value: bank_location_code, displayValue: bank_location, valueExpr: 'code', displayExpr: 'country_name', title: 'Countries', placeholder: 'Select...' }"></div>
+				</div>	
+				<div class="dx-field">
+					<div class="dx-field-label">Intermediary:</div>
+					<div class="dx-field-value" data-bind=" dxSelectBox: { dataSource: intermediaries, value: intermediary, displayValue: intermediary, valueExpr: 'code', displayExpr: 'display_value', title: 'Intermediary ', placeholder: 'Select...' }"></div>  
+				</div>				
+			</div>
+			<div class="separation-bar"></div>
+			<center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' Accept and Continue ', clickAction: accept, visible: 1}"></div>
+			</center>			
+        </div>
+    </div>
+</div>

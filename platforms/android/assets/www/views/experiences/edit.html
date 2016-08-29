@@ -1,0 +1,55 @@
+<div data-options="dxView : { name: 'experienceedit', title: 'Experience Feedback' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view iconSet-container" data-bind="dxScrollView: { }">
+	        <div class="dx-fieldset">
+	        	<!-- ko if: readonly() == true -->
+		        	<div class="dx-field">
+			        	<center>
+						<!-- ko if:thumbs() == "DOWN" -->
+							<img src="img/thumbs_down.png" width="60" />
+						<!-- /ko -->				   
+						<!-- ko if:thumbs() == "UP" -->
+							<img src="img/thumbs_up.png" width="60" />
+						<!-- /ko -->
+						</center>
+		        	</div>
+	        	<!-- /ko -->
+	        	<!-- ko if: readonly() == false -->
+                    <div class="dx-field">
+                        <div class="thumbs_updown">
+                            <div class="home-experiencebtn left" data-bind="dxButton: { clickAction: setThumbUp, text: 'Good', iconSrc: 'img/thumbs_up.png' }"></div>
+                            <div class="home-experiencebtn right" data-bind="dxButton: { clickAction: setThumbDown, text: 'Not Good', iconSrc: 'img/thumbs_down.png' }"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="dx-field" style="display:none">
+                            <div class="dx-field-label">Thumbs:</div>
+                            <div class="dx-field-value" data-bind="dxSelectBox: { dataSource: thumbsOptions, value: thumbs, displayValue: thumbs, valueExpr: 'code', displayExpr: 'code' }"></div>
+                        </div>
+                    </div>
+				<!-- /ko -->
+                <div class="dx-field">
+					<div class="dx-field-label">Category:</div>
+					<!-- ko if: readonly() == true -->
+                        <div class="dx-field-value not-editable" data-bind="text: experience_category"></div>
+                    <!-- /ko -->
+                    <!-- ko if: readonly() == false -->
+                    	<div class="dx-field-value" data-bind="dxSelectBox: { dataSource: experienceCategories, value: experience_category_id, displayValue: experience_category, valueExpr: 'id', displayExpr: 'name', title: 'Experience Categories', placeholder: 'Select...', disabled: disableCategory }"></div>                        
+                    <!-- /ko -->
+                </div>
+                <div class="dx-field">
+					<div class="dx-field-label">Comment:</div>
+                    <!-- ko if: readonly() == true -->
+                        <div class="dx-field-value not-editable noedit-textarea" data-bind="text: comment_text"></div>
+                    <!-- /ko -->
+                    <!-- ko if: readonly() == false -->
+                        <div class="dx-field-value" data-bind=" dxTextArea: { value: comment_text, height: '160px' }"></div>
+                    <!-- /ko -->
+				</div>	 
+			</div>
+			<div class="separation-bar"></div>
+			<center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' Save ', clickAction: saveComment, visible: updatable}"></div>
+			</center>
+		</div>
+    </div>
+</div>

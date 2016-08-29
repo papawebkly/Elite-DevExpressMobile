@@ -1,0 +1,29 @@
+<div data-options="dxView : { name: 'hoepurchasedetail_notedetail', title: 'Add Note'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " style="background:white;>
+        <div class="login_view spouse iconSet-container"">        	
+            <div style="padding: 10px;" >
+				<div style="clear:both">Comment:</div>
+                <!-- ko if: readonly() == true -->
+                    <div style="clear:both" class="not-editable noedit-textarea" data-bind="text: comment_text"></div>
+                <!-- /ko -->
+                <!-- ko if: readonly() == false -->
+                <div style="clear:both" data-bind=" dxTextArea: { value: comment_text, height: '250px' }"></div>
+                <!-- /ko -->
+			</div>
+			<!-- ko if: readonly() == false -->
+				<div class="separation-bar"></div>
+			<!-- /ko -->
+			<center class="elite-btnwrapper">
+			<!-- ko if:note_id() != 0 -->
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' UPDATE ', clickAction: update_note, visible: updatable}"></div>
+			<!-- /ko -->
+			<!-- ko if:note_id() == 0 -->
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' SAVE ', clickAction: update_note, visible: updatable}"></div>
+			<!-- /ko -->
+			</center>			
+			<!-- ko if: readonly() == false -->
+				<div class="separation-bar"></div>
+			<!-- /ko -->
+		</div>
+	</div>
+</div>

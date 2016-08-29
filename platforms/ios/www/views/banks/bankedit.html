@@ -1,0 +1,23 @@
+<div data-options="dxView : { name: 'bankedit', title: 'New Bank Account'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="bankedit_view spouse iconSet-container" data-bind="dxScrollView: { }">
+        	<div class="dx-fieldset">
+				<div class="dx-field">
+					<div class="dx-field-label" style="font-size:12px; color:#4f6f19">Bank Name</div>
+					<div class="dx-field-value" style="font-size: 16px; color:#a5a2a2 !important;" data-bind=" dxTextBox: { value: account_name }"></div>  
+				</div>	        	
+				<div class="dx-field">
+					<div class="dx-field-label" style="font-size:12px; color:#4f6f19">Bank Location</div>
+					<div class="dx-field-value" style="font-size: 16px; color:#a5a2a2 !important;" data-bind="dxLookup: { dataSource: bankLocations, value: bank_location_code, displayValue: bank_location, valueExpr: 'code', displayExpr: 'country_name', title: 'Countries', placeholder: 'Select...' }"></div>
+				</div>	
+				<div class="dx-field">
+					<div class="dx-field-label" style="font-size:12px; color:#4f6f19">Intermediary</div>
+					<div class="dx-field-value" style="font-size: 16px; color:#a5a2a2 !important;" data-bind=" dxSelectBox: { dataSource: intermediaries, value: intermediary, displayValue: intermediary, valueExpr: 'code', displayExpr: 'display_value', title: 'Intermediary ', placeholder: 'Select...' }"></div>  
+				</div>				
+			</div>
+			<center>
+				<div class="elite-yellobtn" data-bind="dxButton: { text: ' Accept and Continue ', onClick: accept, visible: 1}"></div>
+			</center>			
+        </div>
+    </div>
+</div>

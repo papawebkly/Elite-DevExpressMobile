@@ -1,0 +1,62 @@
+<div data-options="dxView : { name: 'profile_addressedit', title: 'Your Addresses'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view spouse  iconSet-container" data-bind="dxScrollView: { }">
+	        <div class="dx-fieldset">
+				<div class="dx-field">
+					<div class="dx-field-label">Location:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: lookupLocationTypes, value: location_type_code, displayValue: location_type, valueExpr: 'code', displayExpr: 'display_value', disabled: readonly, title: 'Location Type', placeholder: 'Select...' }"></div>
+				</div>	
+				<div class="dx-field">
+					<div class="dx-field-label">Line 1:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: address_line_1, readOnly: readonly }"></div>  
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">Line 2:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: address_line_2, readOnly: readonly }"></div>  
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">Line 3:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: address_line_3, readOnly: readonly }"></div>  
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">City:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: city, readOnly: readonly }"></div>  
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">Country:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: lookupCountries, value: country_code, valueExpr: 'code', displayExpr: 'country_name', disabled: readonly, title: 'Countries', placeholder: 'Select...', valueChangeAction: processValueChange }"></div>
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">State:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: lookupStateProvinces, value: state_code, displayValue: state, valueExpr: 'code', displayExpr: 'name', disabled: disableStates, title: 'State Provinces', placeholder: 'Select...' }"></div>
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">Postal Code:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: postal_code, readOnly: readonly }"></div>  
+				</div>				
+                <div class="dx-field">
+					<div class="dx-field-label">Begin:</div>    
+					<div class="dx-field-value" data-bind=" dxDateBox: { value: begin_date, readOnly: readonly, format: 'date' }"></div>  
+				</div>
+                <div class="dx-field">
+					<div class="dx-field-label">End:</div>    
+					<div class="dx-field-value" data-bind=" dxDateBox: { value: end_date, readOnly: readonly, format: 'date' }"></div>  
+				</div>
+				<div class="dx-field">
+					<div class="dx-field-label">Primary:</div>
+					<div class="dx-field-value" data-bind="dxSelectBox: { dataSource: lookupPrimary, value: primary, valueExpr: 'code', displayExpr: 'display_value', disabled: readonly, placeholder: 'Select...', title: 'Primary' }"></div>
+				</div>	
+	        </div>
+	        <div class="separation-bar"></div>
+	        <center class="elite-btnwrapper">
+			<!-- ko if:address_id() != 0 -->
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' UPDATE ADDRESS ', clickAction: update_profileaddress, visible: updatable}"></div>
+			<!-- /ko -->
+			<!-- ko if:address_id() == 0 -->
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' CREATE ADDRESS ', clickAction: update_profileaddress, visible: 1}"></div>
+			<!-- /ko -->	        
+			</center>
+			<div class="separation-bar"></div>
+ 		</div>
+ 	</div>
+</div>

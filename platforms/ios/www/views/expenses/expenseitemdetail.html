@@ -1,0 +1,23 @@
+<div data-options="dxView : { name: 'expenseitemdetail', title: 'Receipt Detail' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view spouse iconSet-container" data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Vendor Name:</div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: vendor_name, readOnly: readonly } "></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Expense Date:</div>
+                    <div class="dx-field-value" data-bind=" dxDateBox: { value: expense_date, format: 'date', readOnly: readonly } "></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Amount:</div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: title, readOnly: readonly } "></div>
+                </div>
+            </div>
+          	<center>
+				<div class="elite-yellobtn" data-bind="dxButton: { text: ' UPDATE RECEIPT ', onClick: update_expenseitem, visible: updatable}"></div>
+            </center>
+        </div>
+    </div>
+</div>

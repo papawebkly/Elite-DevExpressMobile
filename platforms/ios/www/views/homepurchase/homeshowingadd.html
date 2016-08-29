@@ -1,0 +1,56 @@
+<div data-options="dxView : { name: 'homeshowingadd', title: ''} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="homeshowingadd_view spouse iconSet-container" data-bind="dxScrollView: { }">
+			<div id="contact_header">
+                <center><img data-bind="" src="img/new/addI.png" class="c_avatar" /></center>
+                <div id="contact_name" style="color: gray;" data-bind="text: 'Home Image'"></div>
+            </div>
+        	<div class="dx-fieldset" style="border-top:2px solid #e1e1e1">
+                <div class="dx-field">
+					<div class="dx-field-label" style="color: #4f6f19;">Nickname:</div>    
+					<br><div class="dx-field-value" data-bind=" dxTextBox: { value: nickname, readOnly: readonly, placeholder: 'Type Name' }"></div>  
+				</div>
+                <div class="dx-field">
+					<div class="dx-field-label" style="color: #4f6f19;">Address 1:</div>    
+					<br><div class="dx-field-value" data-bind=" dxTextBox: { value: address_line_1, readOnly: readonly, placeholder: 'Type Address1' }"></div>  
+				</div>
+                <div class="dx-field">
+					<div class="dx-field-label" style="color: #4f6f19;">Address 2:</div>    
+					<br><div class="dx-field-value" data-bind=" dxTextBox: { value: address_line_2, readOnly: readonly, placeholder: 'Type Address2' }"></div>  
+				</div>
+                <div class="dx-field">
+					<div class="dx-field-label" style="color: #4f6f19;">City:</div>    
+					<br><div class="dx-field-value" data-bind=" dxTextBox: { value: city, readOnly: readonly, placeholder: 'Type City' }"></div>  
+				</div>
+				<div class="dx-field" style="width: 50%;float:left">
+					<div class="dx-field-label" style="color: #4f6f19;">State:</div>
+					<br><div class="dx-field-value" data-bind="dxSelectBox: { dataSource: lookupStateProvinces, value: state_code, valueExpr: 'code_2char', displayExpr: 'name', disabled: disableStates, title: 'State Provinces', placeholder: 'Select State' }"></div>
+				</div>
+				<div class="dx-field" style="width: 50%; display:inline-block">
+					<div class="dx-field-label" style="color: #4f6f19;">Country:</div>
+					<br><div class="dx-field-value" data-bind="dxSelectBox: { dataSource: lookupCountries, value: country_code, valueExpr: 'code', displayExpr: 'country_name', disabled: readonly, title: 'Countries', placeholder: 'Select Country', valueChangeAction: processValueChange }"></div>
+				</div>				
+                <div class="dx-field" style="width: 50%;float:left">
+					<div class="dx-field-label" style="color: #4f6f19;">Postal Code:</div>
+					<br><div class="dx-field-value" data-bind=" dxTextBox: { value: postal_code, readOnly: readonly, placeholder: 'Type Code' }"></div>
+				</div>
+				<div class="dx-field" style="width: 50%; display:inline-block">				
+					<div class="dx-field-label" style="color: #4f6f19;">Price</div>
+					<br><div class="dx-field-value" data-bind="dxNumberBox:{min:0, value:price, placeholder: 'USD', disabled: readonly}"></div>
+				</div>
+				<div class="dx-field" id="homeshowingadd_rating">
+					<div class="dx-field-label" style="color: #4f6f19;">Rating</div>
+					<!--div class="dx-field-value" data-bind="dxNumberBox:{min:0, max:3, value:rating, placeholder: '', disabled: readonly}"></div-->
+					<br><div class="dx-field-value">
+						<input type="ranger" min="0" max="5" id="rating" data-bind="attr: { value: rating }" step="0.5" style="display:none">
+						<div id="homeshowingadd_rateit" style="margin-top:4px" class="bigstars rateit" data-bind="attr: { 'data-rateit-backingfld': '#rating' }"></div>
+					</div>
+				</div>						
+			</div>
+			<!--div class="separation-bar"></div>
+			<center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' Save HomeShowing ', onClick: add_homeshowing, visible: updatable}"></div>							
+			</center-->			
+		</div>
+	</div>
+</div>

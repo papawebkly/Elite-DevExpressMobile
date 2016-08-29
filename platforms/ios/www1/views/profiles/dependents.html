@@ -1,0 +1,23 @@
+<div data-options="dxView : { name: 'profile_dependents', title: 'Your Dependents'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div data-bind="dxList: { dataSource: dependentslist_data, pullRefreshEnabled: true }">
+        	<div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#profile_dependentsdetail/{dependent_id}'" class="nl-list-item" >
+        		<div class="left" style="margin-bottom: 10px;">
+        		<!-- ko if: $data.picture == "" -->
+        			<div class="circle-photo-wrapper"><img class="dependent_photo" src="img/avatar_noborder.png" /></div>
+        		<!-- /ko -->
+        		<!-- ko if: $data.picture != "" -->
+        			<div class="circle-pic-wrapper"><img class="dependent_photo" data-bind="attr:{'src': $data.picture}" /></div>
+        		<!-- /ko -->
+        		</div>
+        		<div class="left" style="margin-bottom: 10px;">
+	        		<div class="info-row">
+	        			<span data-bind="text: $data.first_name"></span> 
+	        			<span data-bind="text: $data.last_name"></span>
+	        		</div>
+	        		<div class="info-row" data-bind="text: $data.relationship"></div>
+        		</div>
+        	</div>
+    	</div>
+ 	</div>
+</div>

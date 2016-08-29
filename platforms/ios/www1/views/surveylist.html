@@ -1,0 +1,25 @@
+<div data-options="dxView : { name: 'surveylist', title: 'Your Quality Surveys' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div class="iconSet-container" data-bind="dxScrollView: { }">
+	        <div id="surveylist_page" data-bind="dxList: { dataSource: surveys, itemClickAction: '#survey', itemRenderedAction: renderedSurveyList }">
+	            <div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" >
+	                <img class="resource_icon" src="img/Signpost.png" alt="truck" data-bind="attr: {src: icon} "/>
+	               
+	                <div class="nl-list-item-title" data-bind="text: $data.survey_type"></div>
+	                <div class="nl-list-item-subtitle">
+	                	<div class="label">Origin:</div>
+	                    <div class="nl-list-item-text" data-bind="text: $data.origin"></div>
+	                </div>
+	                <div class="nl-list-item-subtitle">
+	                	<div class="label">Destination:</div>
+	                    <div class="nl-list-item-text" data-bind="text: $data.status"></div>
+	                </div>
+	                <div class="nl-list-item-subtitle">
+						<input type="ranger" min="0" max="5" id="yourscore" data-bind="attr: { value: score, id: 'score'+index }" step="0.5">
+						<div class="rateit" data-bind="attr: { 'data-rateit-backingfld': '#score'+index }"></div>
+	                </div>
+	            </div>
+	        </div>
+		</div>
+    </div>        
+</div>

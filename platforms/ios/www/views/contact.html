@@ -1,0 +1,43 @@
+<div data-options="dxView : { name: 'contact', title: 'Contact Bristol' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="coordinator_view iconSet-container" data-bind="dxScrollView: { }">
+            <div id="contact_header">
+                <center><img data-bind="attr: { alt: full_name }" src="img/icon.png" class="c_avatar" /></center>
+                <div id="contact_name" data-bind="text: full_name"></div>
+            </div>
+            <div class="dx-fieldset nl-fieldset" style="border-top: 2px solid #cac3c3;background: transparent;">
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">within the United States</div>
+                    <div class="dx-field-value nl-field-value" data-bind="text: phone_usa"></div>
+                    <div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: '' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">outside the United States</div>
+                    <div class="dx-field-value nl-field-value" data-bind="text: phone_global"></div>
+                    <div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: '' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">EMEA (United Kingdom)</div>
+                    <div class="dx-field-value nl-field-value" data-bind="text: phone_emea"></div>
+                    <div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: '' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">APAC (Singapore)</div>
+                    <div class="dx-field-value nl-field-value" data-bind="text: phone_apac"></div>
+                    <div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: '' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label nl-field-label">Fax</div>
+                    <div class="dx-field-value nl-field-value" data-bind="text: phone_fax"></div>
+                    <div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: '' }"></div>
+                </div>
+                <div class="dx-field" style="padding-bottom:30px">
+                    <div class="dx-field-label nl-field-label">global headquarters</div>
+                    <div class="dx-field-value nl-field-value" data-bind="text: address_line_1 "></div>
+                    <div class="dx-field-value nl-field-value" data-bind="text: address_line_2 "></div>
+                    <div class="dx-field-value nl-field-value" data-bind="text: city_state_zip "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

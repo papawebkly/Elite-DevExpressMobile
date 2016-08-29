@@ -1,0 +1,49 @@
+<div data-options="dxView : { name: 'profile', title: 'Profile'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view iconSet-container" data-bind="dxScrollView: { }">
+            <div class="profile-photo">
+                <img id="profile_photo" data-bind="click: profile_camera" data-bind="src: profile_photo" />
+                <!-- ko:if profile_photo() == '' -->
+                <center><div class="profilephoto_addlink" data-bind="dxButton: { text: ' Click To Add ', clickAction: profile_camera }"></div></center>
+                <!-- /ko -->
+            </div>
+            <center>
+                <div class="profile_fullname"><span data-bind="text: first_name"></span>&nbsp;<span data-bind="text: last_name"></span></div>
+            </center>
+            <div class="dx-fieldset">
+            <!--div class="dx-field">
+					<div class="dx-field-label">First Name:</div>    
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: first_name, readOnly: readonly, placeholder: 'First Name' }"></div>  
+				</div>
+				<div class="dx-field">
+					<div class="dx-field-label">Last Name:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: last_name, readOnly: readonly, placeholder: 'Last Name' }"></div>  
+				</div>	
+				<div class="dx-field">
+					<div class="dx-field-label">Email:</div>    
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: email, readOnly: readonly }"></div>  
+				</div>
+				<div class="dx-field">
+					<div class="dx-field-label">Phone:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: phone, readOnly: readonly }"></div>  
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">Mobile</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: mobile, readOnly: readonly  }"></div>  
+				</div-->
+			</div>
+			<div class="profile_links" data-bind="dxList: { dataSource: profile_links, scrollingEnabled: false, itemRenderedAction: renderedProfileLinks }">
+			    <div data-options="dxTemplate: { name: 'item' }" data-bind="dxAction: action">
+			    	<div class="linkicon-wrapper">
+			    		<img class="profile-linkicon" data-bind="attr: {src: 'img/'+icon, id: id}" />
+			    	</div>
+					<div class="link-caption profilelink-caption" data-bind="text: caption"></div>
+			    </div>   
+			</div>
+			<center>
+				<div class="pad-bot" data-bind="dxButton: { text: ' UPDATE PROFILE ', clickAction: update_profile, visible: updatable }"></div>
+			</center>			
+		</div>
+		<div data-bind="dxActionSheet: { dataSource: actionSheetProfileData, showTitle: false, visible: actionSheetVisible }"></div>
+	</div>		
+</div>

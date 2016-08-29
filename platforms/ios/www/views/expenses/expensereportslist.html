@@ -1,0 +1,156 @@
+<div data-options="dxView : { name: 'expensereportslist', title: 'Expense Reports' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<!--div class="expensereport_desc" id="expensereport_desc0">Expense reports that have not been submitted for reimbursement.</div-->
+<!--    	<div class="expensereport_desc" id="expensereport_desc1">Expense reports that have been submitted for reimbursement.</div>
+        <div id="expensereport0" class="nonsubmitted-erlist expensereports" data-bind="dxList: { dataSource: expensereportslist1_data, pullRefreshEnabled: true, height: setHeight }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#expensereportdetail_notsubmitted/{id}'" class="nl-list-item" >
+            	<div class="dx-icon-expenses"></div>
+            	<div class="left" style="width:100%">
+               		<div class="info-row ellipse_div" data-bind="text: $data.description" style="overflow: hidden; width: 95%; text-overflow: ellipsis;"></div>
+	                <div class="info-row">
+	                	<span data-bind="text: $data.date_from"></span> ~ <span data-bind="text: $data.date_to"></span>
+	                </div-->
+					<!-- ko if: $data.status -->
+					<!--div class="info-row" data-bind="text: $data.status"></div-->
+					<!-- /ko -->
+					<!-- ko ifnot: $data.status -->
+					<!--div class="info-row">Not Submitted</div-->
+					<!-- /ko -->
+                <!--/div>
+            </div>
+        </div-->
+        <!--div id="expensereport1" class="nonsubmitted-erlist expensereports" data-bind="dxList: { dataSource: expensereportslist2_data, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#expensereportdetail_submitted/{voucher_id}'" class="nl-list-item" >
+            	<div class="left" style="width:100%">
+                	<div class="expense_amount">
+                        <span style="float: left" data-bind="text: $data.status"></span>
+                        <span style="float: right; margin-right: 20px; font-size: 14px;" data-bind="text: $data.submitted_currency_code"></span>
+                        <span style="float: right; font-size: 14px; padding-right: 5px;" data-bind="text: $data.submitted_amount"> </span>
+                	</div>
+               		<div class="info-row ellipse_div" data-bind="text: $data.description" style="overflow: hidden; width: 95%; text-overflow: ellipsis; margin-bottom: 5px;"></div>
+                </div>
+            </div>
+        </div-->
+		
+		<div class="expensereport_view iconSet-container" data-bind="dxScrollView: { }">
+        	<div class="pd0">
+        		<div data-bind="dxTabs: { items: expenseTabs, selectedIndex: selectedTabIndex, onSelectionChanged: itemSelectAction }" style="margin-top:15px"></div>
+        		<!-- ko if: selectedTabIndex() == 0 -->
+					<div id="expensereport1" class="nonsubmitted-erlist expensereports" data-bind="dxAccordion: { dataSource: expensereportslist1_data, collapsible: true}">
+						<div data-options="dxTemplate : { name: 'title' }" class="nl-list-item" >
+							<div class="left" style="width:100%">
+								<div class="expense_amount" style="display: inline-block;width:100%;">
+									<span style="float: left;" data-bind="text: $data.description"></span>
+									<span style="float: right; margin-right: 20px; font-size: 14px; color:#4f6f19" data-bind="text: $data.submitted_currency_code"></span>
+									<span style="float: right; font-size: 14px; padding-right: 5px; color:#4f6f19;" data-bind="text: $data.submitted_amount"> </span>
+								</div><br>
+								<div class="info-row ellipse_div"><img src="img/new/calendar.png" style="width:13px; display: inline-block;" /><div data-bind="text: $data.date_from" style="display: inline-block; overflow: hidden; font-size:12px; width: 70%; text-overflow: ellipsis; margin-left:5px;"></div></div>
+							</div>
+						</div>
+						<div class="item-body" data-options="dxTemplate : { name: 'item' } ">
+                			<div style="margin:0px 15px 5px 15px;">
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Name</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.description"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Expense Date</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.expense_date"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Received Date</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.received_date"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Amount</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.amount"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Payee</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.payee_type"></span>
+                				</div>
+                			</div>
+            			</div>
+					</div>
+                <!-- /ko -->
+                <!-- ko if: selectedTabIndex() == 1 -->
+					<div id="expensereport2" class="nonsubmitted-erlist expensereports" data-bind="dxAccordion: { dataSource: expensereportslist2_data, collapsible: true}">
+						<div data-options="dxTemplate : { name: 'title' }" class="nl-list-item" >
+							<div class="left" style="width:100%">
+								<div class="expense_amount" style="display: inline-block;width:100%;">
+									<span style="float: left;" data-bind="text: $data.description"></span>
+									<span style="float: right; margin-right: 20px; font-size: 14px; color:#4f6f19" data-bind="text: $data.submitted_currency_code"></span>
+									<span style="float: right; font-size: 14px; padding-right: 5px; color:#4f6f19;" data-bind="text: $data.submitted_amount"> </span>
+								</div><br>
+								<div class="info-row ellipse_div"><img src="img/new/calendar.png" style="width:13px; display: inline-block;" /><div data-bind="text: $data.date_from" style="display: inline-block; overflow: hidden; font-size:12px; width: 70%; text-overflow: ellipsis; margin-left:5px;"></div></div>
+							</div>
+						</div>
+						<div class="item-body" data-options="dxTemplate : { name: 'item' } ">
+                			<div style="margin:0px 15px 5px 15px;">
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Name</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.description"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Expense Date</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.expense_date"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Received Date</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.received_date"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Amount</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.amount"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Payee</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.payee_type"></span>
+                				</div>
+                			</div>
+            			</div>
+					</div>
+                <!-- /ko -->
+				<!-- ko if: selectedTabIndex() == 2 -->
+					<div id="expensereport3" class="nonsubmitted-erlist expensereports" data-bind="dxAccordion: { dataSource: expensereportslist3_data, collapsible: true}">
+						<div data-options="dxTemplate : { name: 'title' }" class="nl-list-item" >
+							<div class="left" style="width:100%">
+								<div class="expense_amount" style="display: inline-block;width:100%;">
+									<span style="float: left;" data-bind="text: $data.description"></span>
+									<span style="float: right; margin-right: 20px; font-size: 14px; color:#4f6f19" data-bind="text: $data.submitted_currency_code"></span>
+									<span style="float: right; font-size: 14px; padding-right: 5px; color:#4f6f19;" data-bind="text: $data.submitted_amount"> </span>
+								</div><br>
+								<div class="info-row ellipse_div"><img src="img/new/calendar.png" style="width:13px; display: inline-block;" /><div data-bind="text: $data.date_from" style="display: inline-block; overflow: hidden; font-size:12px; width: 70%; text-overflow: ellipsis; margin-left:5px;"></div></div>
+							</div>
+						</div>
+						<div class="item-body" data-options="dxTemplate : { name: 'item' } ">
+                			<div style="margin:0px 15px 5px 15px;">
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Name</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.description"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Expense Date</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.expense_date"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Received Date</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.received_date"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Amount</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.amount"></span>
+                				</div>
+								<div class="dx-field" style="border-bottom: 1px solid #a5a2a2;margin-bottom:10px;">
+                    					<span style="font-size:12px; color:#4f6f19">Payee</span><br>
+                    					<span style="font-size: 16px; color:#a5a2a2 !important;" data-bind="text:$data.payee_type"></span>
+                				</div>
+                			</div>
+            			</div>
+					</div>
+                <!-- /ko -->
+         	</div>		
+
+        </div>
+    </div>
+</div>

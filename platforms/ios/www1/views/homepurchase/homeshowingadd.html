@@ -1,0 +1,52 @@
+<div data-options="dxView : { name: 'homeshowingadd', title: ''} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view spouse iconSet-container" data-bind="dxScrollView: { }">
+        	<div class="dx-fieldset">
+                <div class="dx-field">
+					<div class="dx-field-label">Nickname:</div>    
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: nickname, readOnly: readonly, placeholder: '' }"></div>  
+				</div>
+                <div class="dx-field">
+					<div class="dx-field-label">Address 1:</div>    
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: address_line_1, readOnly: readonly, placeholder: '' }"></div>  
+				</div>
+                <div class="dx-field">
+					<div class="dx-field-label">Address 2:</div>    
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: address_line_2, readOnly: readonly, placeholder: '' }"></div>  
+				</div>
+                <div class="dx-field">
+					<div class="dx-field-label">City:</div>    
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: city, readOnly: readonly, placeholder: '' }"></div>  
+				</div>
+				<div class="dx-field">
+					<div class="dx-field-label">Country:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: lookupCountries, value: country_code, valueExpr: 'code', displayExpr: 'country_name', disabled: readonly, title: 'Countries', placeholder: 'Select...', valueChangeAction: processValueChange }"></div>
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">State:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: lookupStateProvinces, value: state_code, valueExpr: 'code_2char', displayExpr: 'name', disabled: disableStates, title: 'State Provinces', placeholder: 'Select...' }"></div>
+				</div>
+                <div class="dx-field">
+					<div class="dx-field-label">Postal Code:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: postal_code, readOnly: readonly, placeholder: '' }"></div>
+				</div>
+				<div class="dx-field" id="homeshowingadd_rating">
+					<div class="dx-field-label">Rating</div>
+					<!--div class="dx-field-value" data-bind="dxNumberBox:{min:0, max:3, value:rating, placeholder: '', disabled: readonly}"></div-->
+					<div class="dx-field-value">
+						<input type="ranger" min="0" max="3" id="rating" data-bind="attr: { value: rating }" step="0.5" style="display:none">
+						<div id="homeshowingadd_rateit" style="margin-top:4px" class="bigstars rateit" data-bind="attr: { 'data-rateit-backingfld': '#rating' }"></div>
+					</div>
+				</div>
+				<div class="dx-field">				
+					<div class="dx-field-label">Price</div>
+					<div class="dx-field-value" data-bind="dxNumberBox:{min:0, value:price, placeholder: '', disabled: readonly}"></div>
+				</div>						
+			</div>
+			<div class="separation-bar"></div>
+			<center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' Save HomeShowing ', clickAction: add_homeshowing, visible: updatable}"></div>							
+			</center>			
+		</div>
+	</div>
+</div>

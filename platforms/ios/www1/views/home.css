@@ -1,0 +1,118 @@
+	.dx-icon-camera {
+	background: url(../img/Camera.png) center no-repeat;
+}
+.home_view .dx-fieldset .dx-field-label.ribbon {
+	font-size: 18px;
+}
+.dx-theme-ios7 .home_view .dx-list .dx-list-item {
+	border-bottom: 1px solid #cccccc;
+	padding: 13px 15px 5px;
+}
+.dx-theme-ios7 .home_view .dx-list .dx-list-item.nl-list-item {
+	border-bottom: none;
+}
+.home_view .expense-price{
+	display: inline-block;
+	margin-top: -6px;
+	position: absolute;
+	right: 30px;
+	width: 65px;
+}
+.dx-theme-ios7 .home_view .dx-list .dx-list-item:before, 
+.dx-theme-ios7 .home_view #contact_header:before{
+	content: ' ';
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #cbcbcb;
+	border-right: 2px solid #cbcbcb;
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -6px;
+}
+
+ .dx-theme-ios7 .home_view .view-feedback .dx-button-content .dx-button-text {
+	color: #4E7012;
+	font-size: 14px;
+	margin-left: -4px;
+}
+.home_view #contact_header .ribbon{
+	margin-left: 15px;
+}
+.coordinator-avatar{
+	height: 60px;
+	width: 60px;
+	margin: -10px 10px 10px 0;
+	float: left;	
+    overflow: hidden;
+    border-radius: 50%;
+}
+.purple-border{
+    border: 1px solid #46166B;
+}
+#coordinator_photo{
+    width: 60px;
+}
+.home_view #contact_name{
+	padding-top: 0px;
+}
+.home_gallery{
+  margin: 10px 0px;
+  height: 220px;
+}
+.home_view .button.add_newexpenses{
+	/* margin-bottom: 30px; */
+}
+.dx-theme-ios-typography.dx-theme-ios7 .home_view .dx-gallery-wrapper h1{
+	margin-top: 0px;
+}
+.ribbon-label {
+	padding: 15px 15px 0;
+	font-size: 18px;
+}
+.thumbs_updown{
+	/*margin: 20px auto 14px;*/
+	margin: 0px auto 14px;
+	width: 200px;
+}
+	.dx-theme-ios-typography.dx-theme-ios7 .thumbs_updown a {
+		text-decoration: none;
+		text-align: center;
+		font-size: 14px;
+	}
+	.thumbs_updown img{
+		width: 60px;
+	}
+    
+.dx-theme-ios7 .dx-fieldset.outstanding {
+    margin: -15px 0 0;
+}
+.home_view #expense_list{
+	border-bottom: 1px solid #ccc;
+}
+.home-experiencebtn img.dx-icon{
+	width: 60px !important;
+	height: 60px !important;
+}
+.home-experiencebtn span.dx-button-text{
+	display: block !important;
+	font-weight: bold !important;
+}
+.dx-loadpanel-message{
+	font-size: 10px;
+}
+.dx-popup-wrapper .dx-list-item{
+	font-size: 14px;
+}
+.dx-field-value.dx-dropdowneditor{
+	margin-top: 0px !important;
+}
+.dx-field-value .dx-texteditor-input{
+	margin-top: 2px;
+}

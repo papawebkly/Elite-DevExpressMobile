@@ -1,0 +1,42 @@
+.dx-list .dx-list-item {
+	position: relative;
+}
+.resource_icon.backlist_rowicon{
+	margin: 15px 15px 10px 5px;
+	padding: 0;
+}
+.step-indicator{
+	padding: 0;
+	margin-bottom: 10px;
+	color: #999999;
+}
+.pd0{
+	padding: 0;
+}
+.bankedit_view .dx-fieldset{
+	width: 100%;
+	position: relative;
+}
+.bankedit_view .dx-fieldset .dx-field-label{
+	width: 25%;
+}
+.bankedit_view .dx-fieldset .dx-field-value {
+	width: 75% !important;
+
+}
+	.bankedit_view .dx-fieldset .dx-field-value .dx-texteditor-input{
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+.bankedit_view .dx-fieldset .dx-field.two-lines .dx-field-label{
+	line-height: 17px;
+	height: 35px;
+}
+.bankedit_view .dx-fieldset .dx-field.two-lines .dx-field-value {
+	padding-top: 5px;
+}
+
+#bankaccount_editbtn{
+	display: none;
+}

@@ -1,0 +1,40 @@
+.expenseitem-photo{
+    width: 120px;
+    min-height: 120px;
+    overflow: hidden;
+    border: 1px solid #46166B;
+    margin: 10px auto;
+    padding: 0;
+}
+#expenseitem_photo {
+    width: 100%;
+    display: block;
+}
+.latest_btn{
+	margin-bottom: 30px;
+}
+.dx-fieldset{
+	width: 100%;
+	position: relative;
+}
+.dx-theme-ios7 .expenseitemcapture_page .dx-field-label {
+	float: left;
+	width: 35%;
+}
+.dx-theme-ios7 .expenseitemcapture_page .dx-field-value {
+	width: 65% !important;
+}
+#expenseitem_editbtn{
+	display: none;
+}
+.top_description_wrapper{
+	background: #f6f6f6;
+	padding-bottom: 10px;
+}
+.top_description_wrapper .top_desc{
+	background: white;
+	width: 100%;
+	padding: 10px;
+	color: #46116B;
+	text-align: center;
+}

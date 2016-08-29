@@ -1,0 +1,36 @@
+<div data-options="dxView : { name: 'shipmentlist', title: 'MOVE MANAGEMENT' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div data-bind="dxList: { dataSource: shipmentlist_data, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#shipment/{id}'" class="nl-list-item" >
+                <!-- ko if: $data.shipment_type == 'Ground Shipment' -->
+                <img class="resource_icon shipment_icon" src="img/shipments/truck.png" alt="Ground Shipment"/>
+                <!-- /ko -->
+                <!-- ko if: $data.shipment_type == 'Air Shipment' -->
+                <img class="resource_icon shipment_icon" src="img/shipments/plane.png" alt="Air Shipment"/>
+                <!-- /ko -->
+                <!-- ko if: $data.shipment_type == 'Sea Shipment' -->
+                <img class="resource_icon shipment_icon" src="img/shipments/Anchor@2x.png" alt="Sea Shipment"/>
+                <!-- /ko -->
+                <!-- ko if: $data.shipment_type == 'Vehicle Shipment' -->
+                <img class="resource_icon shipment_icon" src="img/shipments/Steering_Wheel@2x.png" alt="Vehicle Shipment"/>
+                <!-- /ko -->
+                <!-- ko if: $data.shipment_type == 'Pet Shipment' -->
+                <img class="resource_icon shipment_icon" src="img/shipments/Paw_Print@2x.png" alt="Pet Shipment"/>
+                <!-- /ko -->
+                <!-- ko if: $data.shipment_type == 'Perm Storage' -->
+                <img class="resource_icon shipment_icon" src="img/shipments/Box_Closed@2x.png" alt="Pet Shipment"/>
+                <!-- /ko -->                
+                
+                <div class="nl-list-item-title ellipse_div" data-bind="text: $data.shipment_type"></div>
+                <div class="nl-list-item-subtitle ellipse_div">
+                	<div class="label">Origin:</div>
+                    <div class="nl-list-item-text" data-bind="text: $data.departure"></div>
+                </div>
+                <div class="nl-list-item-subtitle ellipse_div">
+                	<div class="label">Destination:</div>
+                    <div class="nl-list-item-text" data-bind="text: $data.destination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

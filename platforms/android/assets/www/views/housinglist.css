@@ -1,0 +1,60 @@
+/*.housinglist_view .dx-list-item:before*/
+
+.dx-theme-ios7 .dx-slideout-menu .dx-list .dx-list-item:before{
+    content: ' ' !important;
+    display: block !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-top: 2px solid #cbcbcb !important;
+    border-right: 2px solid #cbcbcb !important;
+    -moz-transform: rotate(45deg) !important;
+    -ms-transform: rotate(45deg) !important;
+    -o-transform: rotate(45deg) !important;
+    -webkit-transform: rotate(45deg) !important;
+    transform: rotate(45deg) !important;
+    position: absolute !important;
+    right: 20px !important;
+    top: 50% !important;
+    margin-top: -6px !important;
+}
+
+.dx-theme-ios7 .dx-list .dx-list-item:before {
+    content: ' ';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #cbcbcb;
+    border-right: 2px solid #cbcbcb;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.housinglist_view.noborder .dx-scrollview-content{
+	border-bottom: none !important;
+}
+.housinglist_view .dx-scrollview-content {
+	border-bottom: 1px solid #cccccc;
+}
+.dx-theme-ios7 .dx-list .nl-list-item:after {
+	background: #cccccc;
+}
+
+.resource_icon.home-clock{
+	background: url(../img/icon-sprite-1x.png);
+	background-position: 0 -270px;
+	width: 30px;
+	margin-top: 9px;
+	height: 14px;
+}
+
+.nl-housing-list-item-text {
+    color: #46116B;
+    display: inline;
+}

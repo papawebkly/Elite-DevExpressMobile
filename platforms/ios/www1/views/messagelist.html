@@ -1,0 +1,16 @@
+<div data-options="dxView : { name: 'messagelist', title: 'Messages' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div data-bind="dxList: { dataSource: messages, itemClickAction: '#messagedetail' }">
+            <div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" >
+                <!--img class="resource_icon" src="img/glyphicons/glyphicons_244_conversation.png" alt="message"/-->
+                <div class="message_list_heading">
+                    <div class="message_last_contact" data-bind="text: last_contact"></div>
+                    <div data-bind="text: contact_name"></div>
+                </div>
+                <div class="message_text">
+                    <p class="message_clip" data-bind="text: last_message"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

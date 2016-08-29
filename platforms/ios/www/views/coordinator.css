@@ -1,0 +1,118 @@
+#contact_header {
+    display: inline-block;
+    width: 100%;
+    font-family: lato-regular, sans-serif;
+}
+
+#contact_name {
+	font-weight: 100;
+    color: #46166B;
+    font-size: 18px;
+    padding-top: 5px;
+	text-align:center;
+	font-family: sans-serif;
+}
+#contact_ccity {
+    color:#c5c1c1;
+	font-weight: 100;
+    font-size: 16px;
+    padding-top: 3px;
+	font-family: sans-serif;
+	text-align:center;
+}
+#contact_title {
+	font-weight: 100;
+    line-height: 16px;
+    color: gray;
+	padding-top:3px;
+    font-size: 16px;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+#contact_header img {
+    border-style: solid;
+}
+
+.dx-theme-ios7 .coordinator_view .wide-field {
+	margin-left:20px;
+    font-size: 14px;
+	color:gray;
+	margin-top:8px;
+}
+
+.dx-theme-ios7 .coordinator_view .dx-scrollview-content .right-btns.dx-widget {
+	margin-top: -30px;
+    margin-right: 5px;
+	padding-bottom: 10px;
+	float: right;
+}
+.dx-theme-ios7 .coordinator_view .dx-scrollview-content .left-btns.dx-widget {
+	margin-top: 0px;
+    margin-left: 5px;
+	padding-bottom: 0px;
+	float: left;
+}
+.coordinator_view .address{
+	margin-top:8px;
+	float: left;
+	margin: 0;
+	color:gray;
+	margin-left:20px;
+
+}
+	.coordinator_view .address .address-wrapper{
+		margin: 5px 0 0 10px;
+	}
+.dx-theme-ios7 .coordinator_view .dx-button .dx-button-content .dx-icon.dx-icon-add{
+	margin-top: 35px;
+	background: url(../img/new/Add.png) no-repeat;
+	width: 25px;
+	height: 25px;
+}
+.dx-theme-ios7 .dx-fieldset.coordinator-ribbon{
+	border-bottom: none;
+	margin-bottom: 5px;
+}
+
+.dx-icon-calendar {
+	background: url(../img/Calendar.png) center no-repeat;
+}
+.coordinator_view .avatar {
+	margin: 10px 10px 0;
+}
+.coordinator_view .button:last-child{
+	margin-bottom: 25px;
+}
+.dx-icon-addcontact {
+	background: url(../img/new/Add.png) no-repeat;
+	background-size:80% 80% !important;
+	position: absolute;
+    top: 0px;
+    right: 2px;
+}
+.dx-icon-picupload{
+	background: url(../img/Upload@2x.png) no-repeat;
+	width: 20px !important;
+}
+.c_avatar
+{
+	float:none;
+	margin:20px 0 20px 0;
+	width:100px;
+	height:100px;
+}
+.coordinator_view .dx-scrollable-content {
+    background: #fafafa !important;
+}
+.coordinator_view .dx-field
+{
+    border-bottom: 1px solid #e4e1e1;
+}
+.coordinator_view .dx-fieldset .dx-field-label {
+    width: 85%;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 0em;
+    padding-top: 4px;
+}

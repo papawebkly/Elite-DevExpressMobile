@@ -1,0 +1,23 @@
+<div data-options="dxView : { name: 'suppliercontacts', title: 'Supplier Contacts' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+
+		<div id="suppliercontacts" class="housinglist_view noborder no-listarrow" data-bind="dxList: { dataSource: suppliercontacts_list, pullRefreshEnabled: true, noDataText: 'No Contacts Found.' }">
+    		<div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" >
+		        <div class="combine_singlerow">
+		        	<p class="resource_title" data-bind="text: $data.service_order_type_name"></p>
+		            <img src="img/purple_avatar.png" class="avatar-mini" />
+		            <div class="resource_name" data-bind="text: $data.full_name"></div>
+		            <div class="contact-btn">
+		            	<!-- ko if:$data.phone != null -->
+		            		<div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', clickAction: $parent.callPhone }"></div>
+		            	<!-- /ko -->
+		            	<!-- ko if:$data.email != null -->
+		            		<div class="button nl-field-icon" data-bind="dxButton: { icon: 'email', clickAction: $parent.sendEmail }"></div>
+		            	<!-- /ko -->
+		            </div>
+		            <div class="resource_desc" data-bind="text: $data.vendor_name"></div>
+		        </div>	        		
+    		</div>    	
+		</div>
+    </div>
+</div>

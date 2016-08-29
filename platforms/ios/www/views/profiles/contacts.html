@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'profile_contacts', title: 'Your Contacts'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div data-bind="dxList: { dataSource: contactslist_data, pullRefreshEnabled: true }">
+        	<div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#profile_contactdetail/{contact_id}'" class="nl-list-item" >
+        		<!-- ko if: $data.contact_type == "Email" -->
+                    <div class="profile_contacts_icon nl-field-icon" data-bind="dxButton: { icon: 'email', onClick: emailProfileContact }"></div>
+        		<!-- /ko -->
+        		<!-- ko if: $data.contact_type == "Telephone" -->
+        			<div class="profile_contacts_icon nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: callProfileContact }"></div>
+        		<!-- /ko -->
+        		<!-- ko if: $data.contact_type == "Skype Number" -->
+        			<div class="profile_contacts_icon nl-field-icon" data-bind="dxButton: { icon: 'skype', onClick: skypeProfileContact }"></div>
+        		<!-- /ko -->        		
+        		<!-- ko if: $data.contact_type == "Fax" -->
+        			<div class="profile_contacts_icon nl-field-icon" data-bind="dxButton: { icon: 'fax' }"></div>
+        		<!-- /ko -->        		
+        		<div class="mid-caps" style="width: 80%">
+        			<!-- ko if: $data.primary == 'EQTRUE' -->
+        				<div class="info-row purple-color">Primary</div>
+        			<!-- /ko -->
+        			<div class="info-row ellipse_div" data-bind="text: $data.location_type"></div>
+        			<div class="info-row ellipse_div">
+        				<span data-bind="text: $data.contact_type"></span>:&nbsp;
+        				<span class="purple-color" data-bind="text: $data.number_address"></span>
+        			</div>
+        		</div>
+        	</div>       
+ 		</div>
+ 	</div>
+</div>

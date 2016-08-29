@@ -1,0 +1,57 @@
+<div data-options="dxView : { name: 'expensereportdetail_submitted', title: '' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="expense_report spouse iconSet-container expense_report" data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Name:</div>
+                    <!-- ko if:report_name() != '' -->
+                    <div class="dx-field-value" style="font-size: 14px;" data-bind="text: report_name"></div>
+                    <!-- /ko -->
+                    <!-- ko if:report_name() == '' -->
+                    <div class="dx-field-value" style="font-size: 14px;">Unnamed</div>
+                    <!-- /ko -->
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Date From:</div>
+                    <div class="dx-field-value" style="font-size: 14px;" data-bind=" dxTextBox: { value: date_from, readOnly: 1 } "></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Date To:</div>
+                    <div class="dx-field-value" style="font-size: 14px;" data-bind=" dxTextBox: { value: date_to, readOnly: 1 } "></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Received:</div>
+                    <div class="dx-field-value" style="font-size: 14px;" data-bind=" dxTextBox: { value: date_received, readOnly: 1 } "></div>
+                </div>                
+                <div class="dx-field">
+                    <div class="dx-field-label">Amount:</div>
+                    <div class="dx-field-value" style="font-size: 14px;" data-bind=" dxTextBox: { value: submitted_amount() + ' ' + submitted_currency_code(), readOnly: 1 } "></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Payee:</div>
+                    <div class="dx-field-value" style="font-size: 14px;" data-bind=" dxTextBox: { value: payee_type, readOnly: 1 } "></div>
+                </div>                
+                <div class="dx-field">
+                    <div class="dx-field-label">Status:</div>
+                    <div class="dx-field-value" style="font-size: 14px;" data-bind=" dxTextBox: { value: status, readOnly: 1 } "></div>
+                </div>
+                
+            </div>
+            <div class="separation-bar"></div>
+			<div class="outstanding dx-fieldset nl-fieldset">
+                <div class="dx-field">
+                    <div class="ribbon dx-field-label nl-field-label" style="width:100% !important">Related Expense Items</div>
+                </div>
+            </div>
+	        <div class="noarrow-list" data-bind="dxList: { disabled: true, dataSource: expenseitems_list, pullRefreshEnabled: true }">
+	            <div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" >
+               		<div class="info-row" data-bind="text: $data.account" ></div>
+	                <div class="info-row">
+	                	<span data-bind="text: $data.submitted_amount"></span> <span data-bind="text: $data.submitted_currency"></span>
+	                </div>
+	                <div class="info-row" data-bind="text: formatDate($data.expense_date)" ></div>
+	            </div>
+	        </div>
+        </div>
+    </div>
+</div>

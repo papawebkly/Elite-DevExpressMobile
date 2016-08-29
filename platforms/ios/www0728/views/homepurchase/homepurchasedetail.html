@@ -1,0 +1,45 @@
+<div data-options="dxView : { name: 'homepurchasedetail', title: 'Detail' } ">
+	<div data-bind="dxCommand: { id: 'back', title: 'Back', action: goBack, type:'back' }"/>
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="realestate-page  iconSet-container" data-bind="dxScrollView: { }" id="homepurchasedetail_page">
+	        <div class="resource_ribbon">
+                <div class="resource_title" data-bind="text: title"></div>
+	            <img src="img/Home.png" class="home-icon" />
+                <div class="homesale_title" data-bind="text: address_line_1"></div>
+                <!-- ko if: address_line_2()-->
+                    <div class="homesale_title" data-bind="text: address_line_2"></div>
+                <!-- /ko -->
+                <!-- ko if:city_state_zip() -->
+                    <div class="homesale_title" data-bind="text: city_state_zip"></div>
+                <!-- /ko -->
+
+                <div class="homepurchase_map button nl-field-icon" data-bind="dxButton: { icon: 'map', clickAction: goHMap }"></div>
+	        </div>
+	        <div class="dx-fieldset nl-fieldset">		        	
+	            <div class="dx-field">
+	            	<div class="dx-field-icon"><img src="img/current_list.png" /></div>
+	                <div class="dx-field-label" style="width: 23%">Asking:</div>
+                	<div class="dx-field-value purple_color" style="width: 40%; margin-top:0px;" data-bind=" dxTextBox: { value: asking, readOnly: true }"></div>  
+	            </div>
+	            <div class="dx-field ">
+	            	<div class="dx-field-icon"><img src="img/days_onmarket.png" /></div>
+	                <div class="dx-field-label">Your Score:</div>
+	                <div class="dx-field-value scores">
+						<input type="ranger" min="0" max="3" id="yourscore" data-bind="attr: { value: your_score }" step="0.5" style="display:none">
+						<div class="rateit" data-bind="attr: { 'data-rateit-backingfld': '#yourscore' }" data-rateit-ispreset="true" data-rateit-readonly="true"></div>
+	                </div>	                
+	            </div>
+	        </div>
+			<!--div id="realstatedetail_map" data-bind="dxMap:map_options"></div-->
+			<div id="homepurchasedetail_gallery" data-bind="dxGallery: { showIndicator: false, swipeEnabled: true, dataSource: galleryData, loop: true, slideshowDelay: 1000, animationDuration: 800, noDataText: 'No Pictures Found.' }"></div>
+			<div class="action_links" data-bind="dxList:{dataSource: detail_links, scrollingEnabled: false }">
+	            <div data-options="dxTemplate : { name: 'item' }" data-bind="dxAction: action" class="nl-list-item" >
+	            	<div class="link-icon">
+	                	<img data-bind="attr: { src: icon }" />
+	                </div>
+	                <div class="link-caption nl-list-item-title" data-bind="text: caption"></div>
+	            </div>
+			</div>			
+        </div>
+    </div>
+</div>

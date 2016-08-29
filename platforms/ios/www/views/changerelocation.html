@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'changerelocation', title: 'Change Destination' } ">
+	<div data-bind="dxCommand: { title: 'Next', icon: 'edit', onExecute:selectedAssignment, id: 'save', visible: true, type: 'normal' }" ></div>
+	<div data-options="dxContent : { targetPlaceholder: 'content' } ">
+		<div class="destination_view spouse" data-bind="dxScrollView: { }">
+            <img src="img/new/changerelocation-bg.png" style="width:100%"/>
+            <div style="margin: -20px 40px 20px 40px">
+            <div data-bind="dxSelectBox: { dataSource: assignmentslist_data, value: assignment_id, valueExpr: 'id', displayExpr: 'locations', title: 'Assignments', placeholder: 'Select Destination', onValueChanged: selectReloaction}"></div>
+            </div>
+            <!--div class="jobpage-subheader">Preview:</div-->
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Origin:</div>
+                    <div class="dx-field-value value-field" data-bind="{text: origin}"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Destination:</div>
+                    <div class="dx-field-value value-field" data-bind="{text: destination}"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Status:</div>
+                    <div class="dx-field-value value-field" data-bind="{text: status}"></div>
+                </div>
+            </div>
+            <center>
+                <div class="destination-logout" data-bind="dxButton: { text: '', onClick: logout}"></div>
+            </center>
+            <!--center class="elite-btnwrapper">
+                <div class="elite-newbtn" data-bind="dxButton: { text: ' Log Out ', onClick: logout}"></div>
+            </center-->
+		</div>
+    </div>
+</div>

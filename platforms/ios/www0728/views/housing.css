@@ -1,0 +1,77 @@
+.home-icon {
+	width: 50px;
+	float: left;
+//	margin: 35px 20px 40px 20px !important;
+}
+
+.housing_view .ribbon{
+	font-size: 18px;
+	margin: 15px 15px 5px 0;	
+}
+.housing_view .contact_title {
+	line-height: 20px;
+	color: #46166B;
+	font-size: 14px;
+}
+.dx-field-icon{
+	float: left;
+}
+.dx-theme-ios.dx-version-major-7 .housing_view .dx-field-icon {
+	padding-top: 9px;
+	margin-right: 10px;
+	margin-left: 48px;
+}
+	.dx-theme-ios.dx-version-major-7 .housing_view .dx-field-icon img {
+		width: 15px
+	}
+.dx-theme-ios.dx-version-major-7 .housing_view .dx-field-label {
+	width: 30%;
+
+}
+.dx-theme-ios.dx-version-major-7 .housing_view .dx-field-value {
+	width: 35%;
+	/*
+	margin-top: 8px;
+	padding-bottom: 7px;
+	*/
+	margin-top: 8px;
+	padding-bottom: 0;
+	color: #46166B;
+	font-size: 14px;	
+}
+.latest-btn {
+	margin-bottom: 30px;
+}
+.service_agent_card {
+	height: 90px;
+	position: absolute;
+	background: white;
+	z-index: 1;
+	width: 100%;
+	padding-left: 15px;
+}
+
+.service_agent_card .avatar-mini{
+	width: 50px;
+}
+.service_agent_card .resource_title {
+	padding: 0 0 5px 2px;
+	line-height: 30px;
+}
+
+.housing_map{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.contacts-noexist{
+	text-align: center;
+	color: #46166B;
+}
+.nl-field-icon-mailbox {
+    margin-top: -4px;
+}
+
+.nl-field-icon-lock img{
+    height:15px;
+    }

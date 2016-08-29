@@ -1,0 +1,23 @@
+.noarrow-list.dx-list .dx-list-item:before{
+	border-top : none !important;
+	border-right : none !important;
+}
+
+.dx-theme-ios.dx-version-major-7 .expense_report .dx-fieldset .dx-field-value {
+	float: right;
+	width: 70%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: 0;
+}
+
+.expense_report .dx-fieldset .dx-field-label {
+	float: left;
+	width: 30%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    line-height: 16px;
+	
+}

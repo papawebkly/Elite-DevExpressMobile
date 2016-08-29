@@ -1,0 +1,27 @@
+<div data-options="dxView : { name: 'profile_addresses', title: 'Your Addresses'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div data-bind="dxList: { dataSource: addresseslist_data, pullRefreshEnabled: true }">
+        	<div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#profile_addressdetail/{address_id}'" class="nl-list-item" >
+        		<img class="link-icon listicon-margin" src="img/Signpost.png">
+        		<div class="left" style="width: 80%">
+        			<!-- ko if: $data.primary == 'EQTRUE' -->
+        				<div class="info-row">Primary</div>
+        			<!-- /ko -->
+        			<!-- ko if: $data.address_line_1 != null -->
+            			<div class="info-row wrap_div" data-bind="text: $data.address_line_1"></div>
+        			<!-- /ko -->
+        			<!-- ko if: $data.address_line_2 != null -->
+            			<div class="info-row wrap_div" data-bind="text: $data.address_line_2"></div>
+        			<!-- /ko -->
+        			<!-- ko if: $data.address_line_3 != null -->
+            			<div class="info-row wrap_div" data-bind="text: $data.address_line_3"></div>
+        			<!-- /ko -->
+        			
+        			<!-- ko if: $data.city_state != ''  -->
+            			<div class="info-row wrap_div" data-bind="text: $data.city_state"></div>
+        			<!-- /ko -->
+        		</div>
+        	</div>
+ 		</div>
+ 	</div>
+</div>

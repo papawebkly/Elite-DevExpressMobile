@@ -1,0 +1,87 @@
+<div data-options="dxView : { name: 'home', title: 'BRISTOL Elite Mobile™' }">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+	    <div class="home_view iconSet-container" data-bind="dxScrollView: { }">
+            <div class="dx-fieldset nl-fieldset coordinator-ribbon">
+                <div class="dx-field">
+                    <div class="ribbon dx-field-label nl-field-label">Your Mobility Advisor</div>
+                </div>
+            </div>	    
+	        <div data-bind="dxList: { dataSource: coordinator, itemClickAction: '#coordinator', scrollingEnabled: false }">	        	
+	            <div data-options="dxTemplate : { name: 'item' } " >
+		            <div class="coordinator-avatar">
+                        <img src="img/purple_avatar60.png" id="coordinator_photo" />
+                    </div>
+		            <div id="contact_name" data-bind="text: full_name">&nbsp;</div>
+		            <div id="contact_title">Relocation Mobility Advisor</div>
+	            </div>
+	        </div>    
+	        <div class="separation-bar"></div>
+            <div class="dx-fieldset nl-fieldset coordinator-ribbon">
+                <div class="dx-field">
+                    <div class="ribbon dx-field-label nl-field-label">How is your relocation going?</div>
+                </div>
+            </div>	
+            <div>
+		        <div class="thumbs_updown">
+		        	<!--a href="javascript:void(0);" onclick="javascript:giveFeedback(1);" class="left">
+		        		<img src="img/thumbs_up.png" /><br>
+		        		Good
+		        	</a>
+		        	<a href="javascript:void(0);" onclick="javascript:giveFeedback(0);" class="right">
+		        		<img src="img/thumbs_down.png" /><br>
+		        		Not Good
+		        	</a>
+		        	<div class="clearfix"></div-->
+		        	<div class="home-experiencebtn left" data-bind="dxButton: { clickAction: '#givefeedback/1', text: 'Good', iconSrc: 'img/thumbs_up.png' }"></div>
+		        	<div class="home-experiencebtn right" data-bind="dxButton: { clickAction: '#givefeedback/0', text: 'Not Good', iconSrc: 'img/thumbs_down.png' }"></div>
+		        	<div class="clearfix"></div>
+		        </div>	        
+           	</div>           
+	        <!--div class="ribbon-label">Your Items</div>
+			<div class="home_gallery" data-bind="dxGallery: { dataSource: galleryData, swipeEnabled: true}">
+				<div data-options="dxTemplate: { name: 'item' }">
+					<center>
+						<h1 data-bind="text: title"></h1>
+				        <div class="thumbs_updown">
+				        	<a href="#" class="left">
+				        		<img src="img/thumbs_up.png" /><br>
+				        		Good
+				        	</a>
+				        	<a href="#" class="right">
+				        		<img src="img/thumbs_down.png" /><br>
+				        		Not Good
+				        	</a>
+				        	<div class="clearfix"></div>
+				        </div>	        
+						<div class="button" data-bind="dxButton: { text: 'Add Comments', clickAction: '' }"></div>
+					</center>
+				</div>			
+			</div-->	        
+			<div class="separation-bar"></div>
+<!--            <div class="outstanding dx-fieldset nl-fieldset">
+                <div class="dx-field">
+                    <div class="ribbon dx-field-label nl-field-label">Outstanding Receipts</div>
+                </div>
+            </div>
+	        <div id="expense_list" data-bind="dxList: { dataSource: expenseitemslist_data, autoPagingEnabled: true, showNextButton: true }">
+                <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#expenseitemcapture/{id}'" class="nl-list-item" >
+                    <div style="width:100%">
+                        <img src="img/Dollar.png" alt="account" style="float:left;width:30px;margin:15px" />
+                        <div style="float: left;margin-left: 0px">
+                            <div class="info-row ellipse_div" data-bind="text: $data.vendor_name" style="overflow: hidden; width: 100%; text-overflow: ellipsis;"></div>
+                            <div class="info-row">
+                            	<span data-bind="text: $data.expense_amount"></span> <span data-bind="text: $data.currency_id"></span>
+                            </div>
+                            <div class="info-row" data-bind="text: $data.expense_date"></div>                            
+                        </div>
+                        <div class='clear'></div>
+                    </div>
+                </div>
+	        </div>       
+	        <div class="separation-bar"></div>
+ -->
+	        <!--center><div class="button add_newexpenses" data-bind="dxButton: { text: 'ADD NEW EXPENSES', clickAction: add_new_expenses }"></div></center>
+	        <div class="separation-bar"></div-->
+	    </div>
+    </div>
+</div>

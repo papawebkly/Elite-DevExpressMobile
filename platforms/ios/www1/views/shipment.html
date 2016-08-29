@@ -1,0 +1,161 @@
+<!--Use relocation id to retrieve all the shipments-->
+<!--Create an array of the shipments-->
+<!--go through each component of the array to build the resulting html-->
+<!--when a user clicks a different tab, show the appropriate content-->
+
+<div data-options="dxView : { name: 'shipment' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div id="shipmentdetail_page" class="iconSet-container" data-bind="dxScrollView: { }">
+	        <div class="service_header ground-shipment grey-bg">
+	        	<!--img src="img/img_icon.png" class="ground-icon" />
+	        	<div class="service_name" data-bind="text: shipment_type"></div-->
+	        	
+		        <div class="resource_card">
+		            <div class="resource_title">Your Move Coordinator</div>
+		            <img data-bind="attr: { alt: move_coordinator_full_name }" src="img/purple_avatar.png" class="avatar-mini" />
+		            <!--<img class="avatar-mini" src="img/defaultavatar.png" alt="move coordinator"/>-->
+		            <div class="resource_name" data-bind="text: move_coordinator_full_name"></div>
+		            <div class="resource_desc" data-bind="text: vendor_name"></div>
+		            <div class="contact-btn">
+		            	<!-- ko if: move_coordinator_phone() != '' -->
+		            		<div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', clickAction: callMe }"></div>
+		            	<!-- /ko -->
+		            	<!-- ko if: move_coordinator_email() != '' -->		            	
+		            		<div class="button nl-field-icon" data-bind="dxButton: { icon: 'email', clickAction: emailMe }"></div>
+		            	<!-- /ko -->
+		            	<div class="clearfix"></div>
+		            </div>		    
+		            <div class="clearfix"></div>  
+		        </div>
+	        </div>
+
+	        <div class="shipment_route" data-bind="text: shipment_route"></div>
+
+	        <div id="shipment_tabs" data-bind="dxTabs: { dataSource: tabs, selectedIndex: selectedTab }"></div>
+			<div class="dx-fieldset nl-fieldset-tabs">
+                <!-- ko if: selectedTab() == 0 -->
+				    <div class="shipment_dates">
+				        <div class="dx-field">
+				            <div class="dx-field-label">Survey Date:</div>
+				            <!-- ko if: requested_survey() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: requested_survey() != "" -->
+				            <div class="dx-field-value" data-bind="text: requested_survey"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Pack Date:</div>
+				            <!-- ko if: requested_pack() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: requested_pack() != "" -->
+				            <div class="dx-field-value" data-bind="text: requested_pack"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Load Date:</div>
+				            <!-- ko if: requested_load() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: requested_load() != "" -->
+				            <div class="dx-field-value" data-bind="text: requested_load"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Delivery Date:</div>
+				            <!-- ko if: requested_delivery() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: requested_delivery() != "" -->
+				            <div class="dx-field-value" data-bind="text: requested_delivery"></div>
+				            <!-- /ko -->
+				        </div>
+				    </div>
+
+                <!-- /ko -->
+                <!-- ko if: selectedTab() == 1 -->
+				    <div class="shipment_dates" >
+				        <div class="dx-field">
+				            <div class="dx-field-label">Survey Date:</div>
+				            <!-- ko if: scheduled_survey() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: scheduled_survey() != "" -->
+				            <div class="dx-field-value" data-bind="text: scheduled_survey"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Pack Date:</div>
+				            <!-- ko if: scheduled_pack_range() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: scheduled_pack_range() != "" -->
+				            <div class="dx-field-value" data-bind="text: scheduled_pack_range"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Load Date:</div>
+				            <!-- ko if: scheduled_load_range() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: scheduled_load_range() != "" -->
+				            <div class="dx-field-value" data-bind="text: scheduled_load_range"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Delivery Date:</div>
+				            <!-- ko if: scheduled_delivery_range() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: scheduled_delivery_range() != "" -->
+				            <div class="dx-field-value" data-bind="text: scheduled_delivery_range"></div>
+				            <!-- /ko -->
+				        </div>
+				    </div>
+
+                <!-- /ko -->
+                <!-- ko if: selectedTab() == 2 -->
+				    <div class="shipment_dates">
+				        <div class="dx-field">
+				            <div class="dx-field-label">Survey Date:</div>
+				            <!-- ko if: actual_survey() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: actual_survey() != "" -->
+				            <div class="dx-field-value" data-bind="text: actual_survey"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Pack Date:</div>
+				            <!-- ko if: actual_pack_range() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: actual_pack_range() != "" -->
+				            <div class="dx-field-value" data-bind="text: actual_pack_range"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Load Date:</div>
+				            <!-- ko if: actual_load_range() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: actual_load_range() != "" -->
+				            <div class="dx-field-value" data-bind="text: actual_load_range"></div>
+				            <!-- /ko -->
+				        </div>
+				        <div class="dx-field">
+				            <div class="dx-field-label">Delivery Date:</div>
+				            <!-- ko if: actual_delivery_range() == "" -->
+				            <div class="dx-field-value">TBD</div>
+				            <!-- /ko -->
+				            <!-- ko if: actual_delivery_range() != "" -->
+				            <div class="dx-field-value" data-bind="text: actual_delivery_range"></div>
+				            <!-- /ko -->
+				        </div>
+				    </div>
+                <!-- /ko -->
+	        </div>
+		</div>
+    </div>
+</div>

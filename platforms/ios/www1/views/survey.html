@@ -1,0 +1,22 @@
+<div data-options="dxView : { name: 'survey', title: 'How are we doing?' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="iconSet-container" data-bind="dxScrollView: { }">
+			<div class="survey_gallery" data-bind="dxGallery: { dataSource: surveryGalleryData, swipeEnabled: true, itemRenderedAction: surveryRendered}">
+				<div data-options="dxTemplate: { name: 'item' }">
+					<center>
+						<h1 data-bind="text: title"></h1>
+					</center>
+					<div class="question_desc" data-bind="text: question"></div>
+					<center>
+						<input type="ranger" min="0" max="5" data-bind="attr: { value: score }" id="backing" step="0.5" style="display:none" />
+						<div class="bigstars rateit" data-rateit-backingfld= "#backing"></div>						
+					</center>
+					<div class="separation-bar"></div>
+					<center class="elite-btnwrapper">
+						<div class="surveryadd_btn button elite-newbtn" data-bind="dxButton: { text: 'Add Comments', clickAction: '' }"></div>					
+					</center>
+				</div>		
+			</div>	
+        </div>
+    </div>
+</div>

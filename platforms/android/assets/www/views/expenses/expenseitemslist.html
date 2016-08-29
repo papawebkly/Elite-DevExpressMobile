@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'expenseitemslist', title: '' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div class="expenseitem_desc" id="expenseitem_desc0">Unattached are receipts not attached to an expense report.</div>
+    	<div class="expenseitem_desc" id="expenseitem_desc1">Not Submitted are attached receipts that have not been submitted.</div>
+        <div id="expenseitem0" class="no-listarrow expenseitems" data-bind="dxList: { dataSource: expenseitemslist1_data, pullRefreshEnabled: true, height: setHeight }">
+            <div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" ><!-- data-bind="dxAction: '#expenseitemcapture/{id}'"  -->
+            	<div class="dx-icon-expenses"></div>
+            	<div class="left" style="width:100%">
+               		<div class="info-row ellipse_div" data-bind="text: $data.vendor_name" style="overflow: hidden; width: 100%; text-overflow: ellipsis;"></div>
+               		<div class="info-row">
+               			<span data-bind="text: $data.expense_amount"></span> <span data-bind="text: $data.currency_id"></span>
+               		</div>
+               		<div class="info-row" data-bind="text: $data.expense_date"></div>
+                </div>
+            </div>
+        </div>
+        <div id="expenseitem1" class="no-listarrow expenseitems" data-bind="dxList: { dataSource: expenseitemslist2_data, pullRefreshEnabled: true, height: setHeight }">
+            <div data-options="dxTemplate : { name: 'item' } " class="nl-list-item" ><!-- data-bind="dxAction: '#expenseitemcapture/{id}'" -->
+            	<div class="dx-icon-expenses"></div>
+            	<div class="left" style="width:100%">
+               		<div class="info-row ellipse_div" data-bind="text: $data.vendor_name" style="overflow: hidden; width: 100%; text-overflow: ellipsis;"></div>
+               		<div class="info-row">
+               			<span data-bind="text: $data.expense_amount"></span> <span data-bind="text: $data.currency_id"></span>
+               		</div>
+               		<div class="info-row" data-bind="text: $data.expense_date"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

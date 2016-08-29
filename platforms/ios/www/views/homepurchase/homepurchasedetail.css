@@ -1,0 +1,92 @@
+.dx-theme-ios7 #homepurchasedetail_page .dx-field-icon {
+	padding-top: 9px;
+	margin-right: 10px;
+	margin-left: 45px;
+}
+.dx-theme-ios7 #homepurchasedetail_page .dx-field-icon img {
+	width: 15px;
+}
+.dx-theme-ios7 #homepurchasedetail_page .dx-field-label {
+	width: 33%;
+}
+.dx-theme-ios7 #homepurchasedetail_page .dx-field-value {
+	width: 30%;
+	margin-top: 10px;
+	padding-bottom: 0;
+	color: #46166B;
+	font-size: 14px;
+}
+.scores img{
+	width: 18px;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+#realstatedetail_map{
+	width: 100%;
+	height: 150px;
+	margin-bottom: 30px;
+}
+#homepurchasedetail_gallery{
+	width: 100%;
+	height: 150px;
+	border-bottom: 1px solid #ddd;
+}
+/*#homepurchasedetail_gallery .dx-gallery-wrapper img{
+	width: 100%;
+}*/
+#homepurchasedetail_page .action_links{
+	margin-bottom: 30px;
+}
+#homepurchasedetail_page .link-icon img{
+	margin: 0 auto;
+	display: block;
+}
+#homepurchasedetail_page .action_links .link-caption {
+	margin-left: 45px;
+}
+.action_links .link-icon{
+	float: left;
+	width: 30px;
+	margin-top: 5px;
+	padding:0 5px 10px;
+}
+.action_links .link-caption{
+	float: left;
+	margin-left: 10px
+}
+.homepurchasedetail_contact{
+	margin-top: 22px;
+	width: 55%;
+	float: left;	
+}
+.homepurchasedetail_contact .contact_title{
+	line-height: 25px;
+}
+.dx-theme-ios7 #homepurchasedetail_page .dx-fieldset {
+	margin-top: -10px;
+}
+.homepurchase_map{
+	float: right;
+	margin-top: -40px;
+	margin-right: 10px;
+}
+
+.note-row .info-row{
+	margin-top: 5px;
+	margin-left: 45px;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;	
+}
+.dx-theme-ios7 .notes-page .dx-list .dx-list-item:before {
+	border-top: none;
+	border-right: none;
+}
+#homepurchasedetail_page .dx-empty-message{
+	margin-top: 55px;
+}
+
+.purple_color .dx-texteditor-input{
+	color: #46166B !important; 
+}

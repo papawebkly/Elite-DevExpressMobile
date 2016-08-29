@@ -1,0 +1,28 @@
+.bouchers-list .dx-icon-expenses {
+	background: url(../img/icon-sprite-1x.png);
+	background-position: 0 -95px;
+	width: 25px;
+	height: 25px;
+	float: left;
+	margin: 25px 15px auto 5px;
+}
+#expensereportdetail_notsubmittedpage input[readonly]{
+	overflow: hidden !important;
+	text-overflow: ellipsis !important;
+}
+/*
+#expensereport_desc1{
+	display: none;
+}
+*/
+.expensereport_desc{
+	background: white;
+	margin-bottom: 10px;
+	padding: 10px;
+	color: #46116B;
+	text-align: center;
+}
+.expensereport_view .dx-field:after {
+    clear: both;
+    margin-bottom: 12px;
+}

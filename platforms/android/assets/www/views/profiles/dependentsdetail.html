@@ -1,0 +1,45 @@
+<div data-options="dxView : { name: 'profile_dependentsdetail', title: ''} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="dependent_view login_view" data-bind="dxScrollView: { }">
+            <div class="profile-photo">
+                <img id="dependent_photo" data-bind="click: dependent_camera, attr:{src: dependent_photo}" />
+                <!-- ko if:dependent_photo() == '' && readonly() == false -->
+                <center><div style="margin-top: 20px;" class="profilephoto_addlink" data-bind="dxButton: { text: ' Click To Add ', clickAction: dependent_camera }"></div></center>
+                <!-- /ko -->
+            </div>
+            <div class="dx-fieldset">
+                <div class="dx-field">
+					<div class="dx-field-label">First Name:</div>    
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: first_name, readOnly: readonly, placeholder: 'First Name' }"></div>  
+				</div>
+				<div class="dx-field">
+					<div class="dx-field-label">Last Name:</div>
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: last_name, readOnly: readonly, placeholder: 'Last Name' }"></div>  
+				</div>				
+				<div class="dx-field">
+					<div class="dx-field-label">Birthday:</div>
+					<div class="dx-field-value" data-bind=" dxDateBox: { value: birth_date, format: 'date', readOnly: readonly }"></div>  
+				</div>	
+				<div class="dx-field">
+					<div class="dx-field-label">Gender:</div>
+					<div class="dx-field-value" data-bind="dxSelectBox: { dataSource: lookupGenders, value: gender_code, valueExpr: 'code', displayValue: gender, displayExpr: 'display_value', disabled: readonly, placeholder: gender, title: 'Gender', placeholder: 'Select...' }"></div>										
+				</div>	
+				<div class="dx-field">
+					<div class="dx-field-label">Relationship:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: lookupRelationships, value: relationship_code, displayValue: relationship, valueExpr: 'code', displayExpr: 'display_value', disabled: readonly, placeholder: relationship, title: 'Dependent Relationship', placeholder: 'Select...' }"></div> 
+				</div>	
+			</div>
+  	        <div class="separation-bar"></div>
+			<center class="elite-btnwrapper">
+			<!-- ko if:dependent_id() != 0 -->
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' UPDATE DEPENDENT ', clickAction: update_dependentprofile, visible: updatable}"></div>
+			<!-- /ko -->
+			<!-- ko if:dependent_id() == 0 -->
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' CREATE DEPENDENT ', clickAction: update_dependentprofile, visible: 1}"></div>
+			<!-- /ko -->			
+			</center>        
+
+            <div data-bind="dxActionSheet: { dataSource: actionSheetProfileData, showTitle: false, visible: actionSheetVisible }"></div>
+ 		</div>
+ 	</div>
+</div>

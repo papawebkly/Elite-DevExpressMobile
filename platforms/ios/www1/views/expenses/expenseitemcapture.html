@@ -1,0 +1,80 @@
+<div data-options="dxView : { name: 'expenseitemcapture', title: 'Submit Receipt' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div class="expenseitemcapture_page iconSet-container" data-bind="dxScrollView: { }">
+			<!-- ko if: readonly() == false -->
+				<div class="top_description_wrapper"><div class="top_desc">10MB size limit</div></div>
+			<!-- /ko -->    	
+            <div class="dx-fieldset" style="margin-top:0px">
+            	<div class="dx-field">
+	                <div class="expenseitem-photo">
+	                    <img id="expenseitem_photo" data-bind="{click: add_receiptimage, attr:{src:image_uri}}" />
+	                </div>
+	                <!-- ko if: image_uri() == '' -->
+		                <center>
+							<div data-bind="dxButton: { text: ' Add Receipt Image ', clickAction: add_receiptimage, visible: updatable }"></div>
+						</center>			
+					<!-- /ko -->
+	                <!-- ko if: image_uri() != '' -->
+		                <center>
+							<div data-bind="dxButton: { text: ' Change Receipt Image ', clickAction: add_receiptimage, visible: updatable }"></div>
+						</center>			
+					<!-- /ko -->					
+				</div>
+				<!--div class="dx-field">
+					<div class="dx-field-label">Expense Report:</div>
+					<div class="dx-field-value" data-bind="dxSelectBox: { dataSource: expensereportslist_data, value: expense_report_id, displayExpr: 'description', valueExpr: 'id', title: 'Expense Reports', placeholder: 'Select...', disabled: readonly }"></div>
+				</div-->				
+                <div class="dx-field">
+                    <div class="dx-field-label">Vendor:</div>
+                    <div class="dx-field-value" data-bind=" dxTextBox: { value: vendor_name, readOnly: readonly } "></div>
+                </div>
+				<div class="dx-field">
+					<div class="dx-field-label">Account:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: accounts, value: account_id, displayExpr: 'account_description', valueExpr: 'account_id', title: 'Accounts', placeholder: 'Select...', disabled: readonly }"></div>
+				</div>
+				<!--div class="dx-field">
+					<div class="dx-field-label">Category</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: categories, value: category_id, displayExpr: 'account_category_name', valueExpr: 'account_category_code', title: 'Categories', placeholder: 'Select...', disabled: readonly }"></div>
+				</div-->
+				<div class="dx-field">				
+					<div class="dx-field-label">Amount:</div>
+					<div class="dx-field-value" data-bind="dxNumberBox:{min:0.00, max:1000000.00, value:expense_amount, placeholder: '0 ~ 1000000', readOnly: readonly}"></div>
+				</div>
+				<div class="dx-field">
+					<div class="dx-field-label">Currency:</div>
+					<div class="dx-field-value" data-bind="dxLookup: { dataSource: currencies, value: currency_code, displayValue: currency, valueExpr: 'code', displayExpr: 'combined_name', title: 'Currencies', placeholder: 'Select...', disabled: readonly }"></div>
+				</div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Expense Date:</div>
+                    <div class="dx-field-value" data-bind=" dxDateBox: { value: expense_date, format: 'date', readOnly: readonly, placeholder: 'Pick a date' } "></div>
+                </div>            
+				
+			</div>	
+  	        <div class="separation-bar"></div>
+          	<center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: btn_txt, clickAction: update_expenseitem, visible: updatable}"></div>
+            </center>	
+            
+  	        <!-- ko if: id() > 0 -->
+          	<!--center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: 'Delete Receipt', clickAction: delete_expenseitem, visible: readonly}"></div>
+            </center-->
+            <!-- /ko -->
+            <div class="separation-bar"></div>
+		</div>
+		<div data-bind="dxActionSheet: { dataSource: actionSheetExpenseItemData, showTitle: false, visible: actionSheetVisible }"></div>
+		<div id="toastContainer" data-bind="dxToast: { 
+		    message: 'Receipt Submitted.',
+		    type: 'success',
+		    displayTime: 3000,
+		    visible: showCreateReceiptSuccess
+		}">
+		<div id="toastContainer" data-bind="dxToast: { 
+		    message: 'Receipt Submission Failed.',
+		    type: 'error',
+		    displayTime: 3000,
+		    visible: showCreateReceiptError
+		}">
+		</div>
+	</div>
+</div>

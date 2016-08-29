@@ -1,0 +1,55 @@
+.login_view {	
+}
+.login_view .dx-fieldset .dx-field-label {
+	float: left;
+	width: 35%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	
+}
+.dx-theme-ios.dx-version-major-7 .login_view .dx-fieldset .dx-field-value {
+	float: right;
+	width: 60%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: 0;
+}
+.dx-theme-ios7 .login_view .dx-fieldset {
+	margin: 0px;
+	width: auto;
+}
+.login_view .description {
+	background: #f6f6f6;
+	padding: 20px 0 10px;
+	text-align: center;
+	color: #111111;
+}
+	.login_view .description h2{
+		font-size: 18px;
+	}
+	.login_view .description h3{
+		font-size: 14px;
+	}
+.login_view .btn-area {
+	background: #f6f6f6 url(../img/login_bg.png) center -10px no-repeat;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+.login_view .login-btn { 
+	margin-top: 20px;
+}
+.footer-bar{
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	border-top: 1px solid #ede7dd;
+	background-color: #ede7dd;
+    padding-bottom:5px;
+}
+#login_page .dx-field-value{
+	width: 100%;
+}

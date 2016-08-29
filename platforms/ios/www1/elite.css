@@ -1,0 +1,185 @@
+@font-face {
+    font-family: lato-light;
+    src: url("fonts/latolight.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: lato-regular;
+    src: url("fonts/latoregular.ttf") format("opentype");
+}
+
+/* used in list views */
+.nl-list-item-icon {
+
+}
+
+.nl-list-item-title {
+    font-size: 18px;
+    color: #333333;
+}
+
+.nl-list-item-subtitle {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.nl-list-item-text {
+    color: #46116B;
+    display: inline;
+    padding-left: 10px;
+}
+/* used to display a row in a list */
+.list_row {
+    width: 100%;
+    display: inline-block;
+}
+
+.resource_ribbon {
+    border-bottom: 1px solid #C8C8C8;
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-left: 15px;
+    height: 95px;
+    margin-top: 10px;
+}
+
+.resource_ribbon .contact-btn {
+	float: right;
+    margin-top: -35px;
+}
+
+.resource_card {
+    /*margin: 10px 0;*/
+    border-bottom: 1px solid #C8C8C8;
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-left: 15px;
+    height: 105px;
+}
+
+.resource_title {
+    padding: 0 0 10px 0;
+    font-size: 18px;
+}
+.resource_icon {
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin: 0 10px;
+    padding-top: 8px;
+}
+
+.resource_name {
+    font-size: 18px;
+    padding-left: 65px;
+    color: #46116B;
+    margin-top: 2px;
+}
+
+.resource_desc {
+    padding-left: 65px;
+}
+
+.resource_button_group {
+    display: inline-block;
+    float: right;
+}
+
+.img_circle {
+    border-radius: 50% 50% 50% 50%;
+}
+
+.service_header {
+    width: 100%;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.service_header_two_line {
+    width: 100%;
+    padding: 13px 15px;
+}
+
+.service_header img {
+    height: 50px;
+    width: inherit;
+}
+
+.location_card {
+    margin: 10px 0;
+    border-bottom: 1px solid #C8C8C8;
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-left: 15px;
+    height: 70px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.location_card .button {
+margin: 17px auto;
+}
+
+.location_card_icon {
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin: 0 10px;
+    padding-top: 20px;
+}
+
+.address {
+    font-size: .9em;
+    margin: 5px 0 0 10px;
+    float: left;
+    text-align: left;
+}
+
+.service_agent_card {
+    margin: 10px 0;
+    border-bottom: 1px solid #C8C8C8;
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding-left: 15px;
+    height: 80px;
+    padding-bottom: 30px;
+}
+
+.service_agent_name {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 3px;
+    float: left;
+    color: #46166B;
+}
+
+.service_agent_card .button {
+    float: right;
+    margin-top: -15px;
+}
+
+/* used to display information in a band i.e. coordinator */
+.band {
+    float: left;
+    vertical-align: middle;
+}
+
+/* TODO need to move these to specific css or app css */
+.avatar {
+    height: 60px;
+    width: 60px;
+    /*margin: 10px 10px 0 10px;*/
+    margin: -10px 10px 10px 0;
+}
+
+.avatar-mini {
+    height: 50px;
+    width: 50px;
+}
+
+.avatar, .avatar-mini {
+    border-radius: 50% 50% 50% 50%;
+    float: left;
+    /*border: 2px #6B4F88;*/
+}
+
+
+
+
+

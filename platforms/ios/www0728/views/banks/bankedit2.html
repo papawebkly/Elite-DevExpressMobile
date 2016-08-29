@@ -1,0 +1,122 @@
+<div data-options="dxView : { name: 'bankedit2' } ">
+	<div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="bankedit_view iconSet-container" data-bind="dxScrollView: { }">
+        	<div class="pd0">
+        		<div data-bind="dxTabs: { items: bankTabs, selectedIndex: selectedTabIndex, itemSelectAction: itemSelectAction }"></div>
+        		<!-- ko if: bank_account_id() == 0 -->
+	         	<center>
+	         		<div class="step-indicator">Step <span data-bind=" { text: selectedTabIndex()+1 }"></span> of <span data-bind=" { text: totalSteps() }"></span></div>
+	         	</center>	         	
+	            <!-- /ko -->
+                <!-- ko if: selectedTabIndex() == 0 -->
+			    	<div class="dx-fieldset">
+			    		<div class="dx-field two-lines">
+							<div class="dx-field-label">Account<br>Number:</div>
+							<div class="dx-field-value" data-bind=" dxTextBox: { value: account_number, readOnly: readonly }"></div>  
+						</div>	        	
+						<div class="dx-field two-lines">
+							<div class="dx-field-label">Name on<br>Account:</div>
+							<div class="dx-field-value" data-bind=" dxTextBox: { value: name_onaccount, readOnly: readonly }"></div>  
+						</div>	        	
+						<div class="dx-field">
+							<div class="dx-field-label">Currency:</div>
+							<div class="dx-field-value" data-bind="dxLookup: { dataSource: currencies, value: currency_code, displayValue: currency, valueExpr: 'code', displayExpr: 'currency_name', title: 'Currencies', placeholder: 'Select...', disabled: readonly }"></div>
+						</div>	
+						<div class="dx-field">
+							<div class="dx-field-label">Type:</div>
+							<div class="dx-field-value" data-bind="dxLookup: { dataSource: accountTypes, value: account_type_code, displayValue: account_type, valueExpr: 'code', displayExpr: 'display_value', title: 'Account Types', placeholder: 'Select...', disabled: readonly }"></div>
+						</div>	
+						<div class="dx-field">
+							<div class="dx-field-label">Location:</div>
+							<div class="dx-field-value" data-bind="dxLookup: { dataSource: accountLocations, value: account_location_code, displayValue: account_location, valueExpr: 'code', displayExpr: 'display_value', title: 'Account Bank Locations', placeholder: 'Select...', disabled: readonly }"></div>
+						</div>	
+						<div class="dx-field">
+							<div class="dx-field-label">Used For:</div>
+							<div class="dx-field-value" data-bind=" dxTextBox: { value: used_for, readOnly: readonly }"></div>  
+						</div>
+					</div>
+                <!-- /ko -->
+                <!-- ko if: selectedTabIndex() == 1 -->
+					<div class="dx-fieldset">
+						<div class="dx-field two-lines">
+							<div class="dx-field-label">Bank<br>Name:</div>
+							<div class="dx-field-value" data-bind=" dxTextBox: { value: final_account_name, readOnly: readonly }"></div>  
+						</div>	        	
+						<!-- ko if: final_bank_location_code() == 'USA' || final_bank_location_code() == 'CAN' -->
+							<div class="dx-field two-lines">
+								<div class="dx-field-label">ABA<br>Routing #:</div>
+								<div class="dx-field-value" data-bind=" dxTextBox: { value: final_aba_routingno, readOnly: readonly }"></div>  
+							</div>	        	
+						<!-- /ko -->
+						<!-- ko if: final_bank_location_code() != 'USA' && final_bank_location_code() != 'CAN' -->
+							<div class="dx-field two-lines">
+								<div class="dx-field-label">Swift<br>Code:</div>
+								<div class="dx-field-value" data-bind=" dxTextBox: { value: final_swift_code, readOnly: readonly }"></div>  
+							</div>	        	
+							<div class="dx-field">
+								<div class="dx-field-label">IBAN:</div>
+								<div class="dx-field-value" data-bind=" dxTextBox: { value: final_iban, readOnly: readonly }"></div>  
+							</div>	  					
+						<!-- /ko -->
+						<div class="dx-field two-lines">
+							<div class="dx-field-label">Bank<br>Location:</div>
+							<div id="bank_location_list" class="dx-field-value" data-bind="dxLookup: { dataSource: bankLocations, value: final_bank_location_code, displayValue: final_bank_location, valueExpr: 'code', displayExpr: 'country_name', title: 'Countries', disabled: readonly }"></div>
+						</div>	        	
+					</div>
+                <!-- /ko -->
+                <!-- ko if: selectedTabIndex() == 2 -->
+                	<!-- ko if: intermediary() == 'yes' -->
+						<div class="dx-fieldset">
+							<div class="dx-field two-lines">
+								<div class="dx-field-label">Bank<br>Name:</div>
+								<div class="dx-field-value" data-bind=" dxTextBox: { value: int_account_name, readOnly: readonly }"></div>  
+							</div>	        	
+							<!-- ko if:final_bank_location_code() == 'USA' || final_bank_location_code() == 'CAN' -->
+								<div class="dx-field two-lines">
+									<div class="dx-field-label">ABA<br>Routing #:</div>
+									<div class="dx-field-value" data-bind=" dxTextBox: { value: int_aba_routingno, readOnly: readonly }"></div>  
+								</div>	        	
+							<!-- /ko -->
+							<!-- ko if: final_bank_location_code() != 'USA' && final_bank_location_code() != 'CAN' -->
+								<div class="dx-field two-lines">
+									<div class="dx-field-label">Swift<br>Code:</div>
+									<div class="dx-field-value" data-bind=" dxTextBox: { value: int_swift_code, readOnly: readonly }"></div>  
+								</div>	        	
+								<div class="dx-field">
+									<div class="dx-field-label">IBAN:</div>
+									<div class="dx-field-value" data-bind=" dxTextBox: { value: int_iban, readOnly: readonly }"></div>  
+								</div>	  					
+							<!-- /ko -->
+							<div class="dx-field two-lines">
+								<div class="dx-field-label">Bank<br>Location:</div>
+								<div id="bank_location_list" class="dx-field-value" data-bind="dxLookup: { dataSource: bankLocations, value: int_bank_location_code, displayValue: int_bank_location, valueExpr: 'code', displayExpr: 'country_name', title: 'Countries', disabled: readonly }"></div>
+							</div>	        	
+						</div>
+					<!-- /ko -->
+                <!-- /ko -->	
+         	</div>		
+            <!-- ko if: bank_account_id() == 0 -->
+                <!-- ko if: selectedTabIndex()+1 < totalSteps() -->
+                	<div class="separation-bar"></div>
+					<center class="elite-btnwrapper">
+						<div class="elite-newbtn" data-bind="dxButton: { text: ' Next Step >>', clickAction: nextStep, visible: 1}"></div>
+					</center>                         	
+				<!-- /ko -->
+			<!-- /ko -->
+			<!-- ko if: selectedTabIndex()+1 == totalSteps() -->
+				<!-- ko if:bank_account_id() == 0 -->
+				<div class="separation-bar"></div>
+				<center class="elite-btnwrapper">
+					<div class="elite-newbtn" data-bind="dxButton: { text: ' CREATE BANK ACCOUNT ', clickAction: saveBankAccount, visible: 1}"></div>
+				</center>
+				<!-- /ko -->
+			<!-- /ko -->
+			<!-- ko if:bank_account_id() != 0 -->
+				<div class="separation-bar"></div>
+				<center class="elite-btnwrapper">
+					<div class="elite-newbtn" data-bind="dxButton: { text: ' UPDATE BANK ACCOUNT ', clickAction: saveBankAccount, visible: updatable}"></div>
+				</center>
+			<!-- /ko -->         	
+        </div>
+    </div>
+</div>

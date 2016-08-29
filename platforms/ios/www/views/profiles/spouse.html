@@ -1,0 +1,50 @@
+<div data-options="dxView : { name: 'profile_spouse', title: 'Edit'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view spouse iconSet-container" data-bind="dxScrollView: { }">
+        	<!-- ko if:spouse_exist() == 0 && creatable() == false -->
+        		<div class="nodata-message">No data to display</div>
+        	<!-- /ko -->
+        	<!-- ko if:spouse_exist() == 1 || creatable() == true -->
+                <div class="profile-photo circle-photo">
+                    <img id="spouse_photo" data-bind="click: spouse_camera, attr: {src: spouse_photo}" />
+                    <!-- ko if:spouse_photo() == '' && readonly() == false -->
+                    <center><div style="margin-top: -120px;" class="profilephoto_addlink" data-bind="dxButton: { text: ' Click To Add ', onClick: spouse_camera }"></div></center>
+                    <!-- /ko -->
+                </div>        	
+	        	<div class="dx-fieldset">
+	                <div class="dx-field">
+						<div class="dx-field-label">First Name:</div>    
+						<div class="dx-field-value" data-bind=" dxTextBox: { value: first_name, readOnly: readonly, placeholder: 'First Name' }"></div>  
+					</div>
+					<div class="dx-field">
+						<div class="dx-field-label">Last Name:</div>
+						<div class="dx-field-value" data-bind=" dxTextBox: { value: last_name, readOnly: readonly, placeholder: 'Last Name' }"></div>  
+					</div>				
+					<div class="dx-field">
+						<div class="dx-field-label">Birthday:</div>
+						<div class="dx-field-value" data-bind=" dxDateBox: { value: birth_date, format: 'date', readOnly: readonly }"></div>  
+					</div>	
+					<div class="dx-field">				
+						<div class="dx-field-label">Gender:</div>
+						<div class="dx-field-value" data-bind="dxSelectBox: { dataSource: lookupGenders, value: gender_code, displayValue: gender, valueExpr: 'code', displayExpr: 'display_value', disabled: readonly, placeholder: 'Select...', title: 'Gender' }"></div>
+						<!--div class="dx-field-value" >
+							<select class="combobox" data-bind="options: genders, value: gender_code, optionsText: 'optText', optionsValue: 'optValue'"></select>
+						</div-->  
+					</div>	
+					<div class="dx-field">
+						<div class="dx-field-label">Relationship:</div>
+						<div class="dx-field-value" data-bind="dxLookup: { dataSource: lookupRelationships, value: relationship_code, displayValue: relationship, valueExpr: 'code', displayExpr: 'display_value', disabled: readonly, placeholder: 'Select...', title: 'Spouse Relationship' }"></div>
+						<!--div class="dx-field-value" >
+							<select class="combobox" data-bind="options: relationships, value: relationship_code, optionsText: 'optText', optionsValue: 'optValue'"></select>
+						</div-->  
+					</div>	
+				</div>
+	  	        <div class="separation-bar"></div>
+				<center class="elite-btnwrapper">
+					<div class="elite-newbtn" data-bind="dxButton: { text: btn_text, onClick: update_spouseprofile, visible: updatable}"></div>
+				</center>						
+			<!-- /ko -->
+	 	</div>	 	
+        <div data-bind="dxActionSheet: { dataSource: actionSheetProfileData, showTitle: false, visible: actionSheetVisible }"></div>
+ 	</div>
+</div>

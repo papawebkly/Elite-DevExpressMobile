@@ -1,0 +1,11 @@
+.help_version{
+	margin: 10px;
+}
+.version_num{
+	color: #46166B;
+}
+.help_description{
+	margin: 10px;
+	line-height: 22px;
+	color: #46166B;
+}

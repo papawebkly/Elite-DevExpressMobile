@@ -1,0 +1,35 @@
+<div data-options="dxView : { name: 'changerelocation', title: 'Change Relocation' } ">
+	<div data-bind="dxCommand: { title: 'Log Out', action: logout, icon: 'edit', id: 'save', visible: true, type: 'normal' }" ></div>
+	<div data-options="dxContent : { targetPlaceholder: 'content' } ">
+		<div class="login_view spouse" data-bind="dxScrollView: { }">
+            <div class="separation-bar"></div>
+            <div class="jobpage-subheader">Relocation To View:</div>
+            <div style="margin: 10px">
+            <div data-bind="dxSelectBox: { dataSource: assignmentslist_data, value: assignment_id, valueExpr: 'id', displayExpr: 'locations', title: 'Assignments', placeholder: 'Select...', valueChangeAction: selectReloaction }"></div>
+            </div>
+            <!--div class="jobpage-subheader">Preview:</div-->
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Origin:</div>
+                    <div class="dx-field-value value-field" data-bind="{text: origin}"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Destination:</div>
+                    <div class="dx-field-value value-field" data-bind="{text: destination}"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Status:</div>
+                    <div class="dx-field-value value-field" data-bind="{text: status}"></div>
+                </div>
+            </div>
+            <div class="separation-bar"></div>
+            <center class="elite-btnwrapper">
+                <div class="elite-newbtn" data-bind="dxButton: { text: ' Select ', clickAction: selectedAssignment}"></div>
+            </center>
+            <div class="separation-bar"></div>
+            <!--center class="elite-btnwrapper">
+                <div class="elite-newbtn" data-bind="dxButton: { text: ' Log Out ', clickAction: logout}"></div>
+            </center-->
+		</div>
+    </div>
+</div>

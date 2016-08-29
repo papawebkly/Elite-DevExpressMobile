@@ -1,0 +1,12 @@
+.resource_icon{
+	padding-bottom: 11px;
+}
+
+.resource_icon.shipment_icon{
+	margin-top: 15px !important;
+}
+
+.nl-list-item-subtitle .label{
+	display: inline-block;
+	width: 80px;
+}

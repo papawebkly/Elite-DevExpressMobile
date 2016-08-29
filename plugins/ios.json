@@ -1,0 +1,73 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-email-composer": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-calendar": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.notionlabs.elite"
+        }
+    }
+}

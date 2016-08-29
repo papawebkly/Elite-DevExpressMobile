@@ -1,0 +1,64 @@
+<div data-options="dxView : { name: 'coordinator', title: 'Your Mobility Advisor' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="coordinator_view iconSet-container" data-bind="dxScrollView: {pullDownAction: true, pullDownAction: pullDownActionFunction }">
+            <div id="contact_header">
+                <center><img data-bind="attr: { alt: full_name }" src="img/purple_avatar.png" class="c_avatar" /></center>
+                <div id="contact_name" data-bind="text: full_name"></div>
+                <div id="contact_ccity" data-bind="text: country_city"></div>
+                <div id="contact_title">Relocation Mobility Advisor</div>
+            </div>
+            <div class="dx-fieldset nl-fieldset" style="border-top: 2px solid #cac3c3;background: transparent;">
+            	<!-- ko if: phone() != '' -->	
+                <div class="dx-field">
+                    <!--div class="dx-field-label nl-field-label">Phone</div-->
+                    <div class="left-btns button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: callPhone }"></div>
+                    <div class="dx-field-value wide-field" data-bind="text: phone"></div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /ko -->
+                <!-- ko if: mobile() != '' -->
+                <div class="dx-field">
+                    <!--div class="dx-field-label nl-field-label">Mobile</div-->
+                    <div class="left-btns button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: callMobile }"></div>
+                    <div class="dx-field-value wide-field" data-bind="text: mobile"></div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /ko -->
+                <!-- ko if: fax() != '' -->
+                <div class="dx-field">
+                    <!--div class="dx-field-label nl-field-label">Fax</div-->
+                    <div class="left-btns button nl-field-icon" data-bind="dxButton: { icon: 'fax'}"></div>
+                    <div class="dx-field-value wide-field" data-bind="text: fax"></div>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /ko -->
+            <!-- ko if: email() != '' -->
+                <div class="dx-field">
+                    <!--div class="dx-field-label nl-field-label">Email</div-->
+                    <div class="left-btns button nl-field-icon" data-bind="dxButton: { icon: 'email', onClick: emailMe }"></div>
+                    <div class="dx-field-value wide-field" data-bind="text: email "></div>
+                    <div class="clearfix"></div>
+                </div>
+            <!-- /ko -->
+            <!-- ko if: address_line_1() != '' || address_line_2() != '' || address_city_state_zip() != '' -->
+                <div class="dx-field">
+                    <!--div class="dx-field-label nl-field-label">Address</div-->
+                    <div class="left-btns button nl-field-icon" data-bind="dxButton: { icon: 'address'}"></div>
+                    <div class="address" style="padding-bottom: 30px">
+                    	<div class="address-wrapper">
+	                    	<div data-bind="text: address_line_1 " style="width:100%"></div>
+	                    	<div data-bind="text: address_line_2 " style="width:100%"></div>
+	                    	<div data-bind="text: address_city_state_zip" style="width:100%"></div>
+                    	</div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+                <!-- /ko -->
+            </div>
+            
+            <!--div class="button" data-bind="dxButton: { text: 'add coordinator to contacts', onClick: addContacts }"></div>
+            <<div class="button" data-bind="dxButton: { text: 'Send a New Message', onClick: sendNewMsg }"></div>-->
+        </div>
+    </div>
+</div>

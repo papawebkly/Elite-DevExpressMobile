@@ -1,0 +1,13 @@
+<div data-options="dxView : { name: 'banklist', title: 'Bank Accounts' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div data-bind="dxList: { dataSource: accountbankslist_data, pullRefreshEnabled: true }">
+            <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#bankedit2/{bank_account_id}'" class="nl-list-item" >
+                <img class="backlist_rowicon resource_icon" src="img/bankaccount_icon.png" alt="account" />
+                <div class="ellipse_div" data-bind="text: $data.final_bank_name" class="ellipse_div"></div>
+                <div class="ellipse_div" data-bind="text: $data.display_account_number"></div>
+                <div class="ellipse_div" data-bind="text: $data.used_for"></div>
+            </div>
+        </div>
+        
+    </div>
+</div>

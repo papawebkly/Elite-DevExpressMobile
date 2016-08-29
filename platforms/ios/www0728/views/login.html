@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'login', title: ''} ">
+    <div  data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div id="login_page" class="login_view iconSet-container" data-bind="dxScrollView: {}">
+        	<div class="description">
+        		<img src="img/new/pineapple.png"/>
+        		<h2 style="font-family: sans-serif; font-weight: 200;">LOGIN</h2>
+				<div class="login-help" data-bind="dxButton: { text: '', onClick: '#help' }"></div>
+        	</div>
+			<div class="dx-fieldset">
+				<div class="dx-field">    
+					<img src="img/new/email.png" / >    
+					<div class="dx-field-value login-input" data-bind=" dxTextBox: { value: email, placeholder: 'Email' }"></div>
+				</div>
+				<div class="dx-field">
+					<img src="img/new/password.png" / > 
+					<div class="dx-field-value login-input" data-bind=" dxTextBox: { mode: 'password', value: password, placeholder: 'Password' }"></div>  
+				</div>				
+			</div>
+			<div class="btn-area">
+				<center><div class="elite-newbtn login-btn" data-bind="dxButton: { text: '', onClick: login }"></div></center>
+       			<center><div class="forgotbtn" data-bind="dxButton: { text: 'Forgot Password', onClick: go_forgotpwd}"></div></center>
+				<center style="margin-top:20px"><span style="color: white;font-size: 12px;font-weight:200; font-family: sans-serif;">Do not have login?</span></center>
+       			<center><div class="contactus" data-bind="dxButton: { text: 'Contact Us', onClick: go_forgotpwd}"></div></center>
+				
+				<!--div style="display:block; position:absolute; background: #f6f6f6 url('img/login_bg.png') center 1px no-repeat; height:100%; width:100%">
+                </div-->
+			</div>
+		</div>
+	</div>	
+</div>

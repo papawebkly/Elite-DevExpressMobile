@@ -1,0 +1,54 @@
+<div data-options="dxView : { name: 'homesale', title: 'Home Sale',  } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="iconSet-container realestate-page" id="realestate0" data-bind="dxScrollView: { }">
+        	<!-- ko if:nodata() == true -->
+            <div class="dx-empty-message">No Home Sale Found</div>
+        	<!-- /ko -->
+        	<!-- ko if:nodata() == false -->
+	        <div class="resource_ribbon">
+	        	<div class="resource_title">Your Home Sale Agent</div>
+	            <img src="img/purple_avatar.png" class="avatar-mini" />
+	            <div class="resource_name" data-bind="text: seller_name"></div>
+	            <div class="resource_desc" data-bind="text: agent_company"></div>
+	            <div class="contact-btn">
+	            	<!-- ko if: agent_phone() != '' -->
+	            		<div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', onClick: callHomesaleAgent }"></div>
+	            	<!-- /ko -->
+	            	<!-- ko if: agent_email() != '' -->
+	            		<div class="button nl-field-icon" data-bind="dxButton: { icon: 'email', onClick: emailHomesaleAgent }"></div>
+	            	<!-- /ko -->
+	            </div>
+	        </div>
+            <div class="separation-bar"></div>
+	        <div class="resource_ribbon">
+	            <div class="resource_title" >Home Sale Location</div>
+                <img src="img/Home.png" class="homesale-icon" />
+	            <div class="homesale_title" data-bind="text: address_line_1"></div>
+                <!-- ko if: address_line_2() != '' -->
+	            	<div class="homesale_title" data-bind="text: address_line_2"></div>
+                <!-- /ko -->
+                <!-- ko if:city_state_postal() != '' -->
+					<div class="homesale_title" data-bind="text: city_state_postal"></div>
+				<!-- /ko -->
+	        </div>
+	        <div class="dx-fieldset nl-fieldset">
+	        	<!-- ko if:current_list() != '' -->
+		            <div class="dx-field">
+		            	<div class="dx-field-icon"><img src="img/current_list.png" /></div>
+		                <div class="dx-field-label">Current List:</div>
+		                <div class="dx-field-value showall_div" data-bind="text:current_list"></div>
+		            </div>
+                <!-- /ko -->
+                <!-- ko if:days_onmarket() != '' -->
+		            <div class="dx-field">
+		            	<div class="dx-field-icon"><img src="img/days_onmarket.png" /></div>
+		                <div class="dx-field-label">Days on Market:</div>
+		                <div class="dx-field-value showall_div" data-bind="text:days_onmarket"></div>
+		            </div>
+	            <!-- /ko -->
+	        </div>
+			<div id="realstate_map" data-bind="dxMap:map_options"></div>
+			<!-- /ko -->
+        </div>
+    </div>
+</div>

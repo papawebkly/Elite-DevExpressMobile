@@ -1,0 +1,44 @@
+<div data-options="dxView : { name: 'profile_addressdetail', title: 'Your Addresses'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="housing_view mailingaddress_detailview iconSet-container" data-bind="dxScrollView: { }">
+	        <div id="contact_header">
+	            <div class="resource_icon">
+	            	<img src="img/Signpost.png" />
+	            </div>
+	            <div class="left">
+		            <div class="ribbon" data-bind="text: location_type"></div>
+		            <!-- ko if:address_line_1() != null -->
+		            <div class="contact_title" data-bind="text: address_line_1"></div>
+		            <!-- /ko -->
+		            <!-- ko if:address_line_2() != null -->
+		            <div class="contact_title" data-bind="text: address_line_2"></div>
+		            <!-- /ko -->
+		            <!-- ko if:address_line_3() != null -->
+		            <div class="contact_title" data-bind="text: address_line_3"></div>
+		            <!-- /ko -->
+	    			<!-- ko if: $data.city_state() != ''  -->
+	        			<div class="contact_title" data-bind="text: city_state"></div>
+	    			<!-- /ko -->
+	    			<!-- ko if: $data.country_zip() != '' -->
+	        			<div class="contact_title" data-bind="text: country_zip"></div>
+	    			<!-- /ko -->
+    			</div>          
+	        </div>    
+	        <div id="mailingaddress_map" data-bind="dxMap: options"></div>
+	        <div class="dx-fieldset nl-fieldset">
+	        	<div class="ribbon">Your mailing address dates...</div>
+	            <div class="dx-field">
+	            	<div class="dx-field-icon"><img src="img/Calendar.png" /></div>
+	                <div class="dx-field-label">Begin Date:</div>
+	                <div class="dx-field-value" data-bind="text:begin_date"></div>
+	            </div>
+
+	            <div class="dx-field">
+	            	<div class="dx-field-icon"><img src="img/Calendar.png" /></div>
+	                <div class="dx-field-label">End Date:</div>
+	                <div class="dx-field-value" data-bind="text:end_date"></div>
+	            </div>
+	        </div>
+ 		</div>
+ 	</div>
+</div>

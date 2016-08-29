@@ -1,0 +1,36 @@
+.realestate-page .dx-empty-message {
+    color: #777;
+    text-align: center;
+    position: relative;
+    padding: 13px 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#homesale_ribbon {
+    display: inline-block;
+    width: 100%;
+    font-family: lato-regular, sans-serif;
+}
+
+.homesale-icon {
+	width: 50px;
+	float: left;
+//	margin: 35px 20px 40px 20px !important;
+}
+
+.homesale-line {
+	line-height: 20px;
+	color: #46166B;
+	font-size: 14px;
+}
+
+.homesale_title {
+    padding-left: 65px;
+    font-size: 14px;
+
+}
+

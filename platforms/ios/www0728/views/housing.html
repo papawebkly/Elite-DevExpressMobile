@@ -1,0 +1,76 @@
+<!--Use relocation id to retrieve all the temporary living orders-->
+<!--Create an array of the orders-->
+<!--go through each component of the array to build the resulting html-->
+<!--when a user clicks a different tab, show the appropriate content-->
+
+<div data-options="dxView : { name: 'housing', title: 'Your Housing' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div class="housing_view iconSet-container" data-bind="dxScrollView: { }">
+            <div class="resource_ribbon">
+                <p class="resource_title">Your Housing Contact</p>
+                <img class="avatar-mini" src="img/purple_avatar.png" data-bind="alt: service_agent_full_name"/>
+                <div class="resource_name" data-bind="text: service_agent_full_name"></div>
+                <div class="resource_desc" data-bind="text: service_agent_company"></div>
+                <div class="contact-btn">
+                    <!-- ko if:service_agent_email() != '' -->
+                    <div class="button nl-field-icon" data-bind="dxButton: { icon: 'email', clickAction: emailMe }"></div>
+                    <!-- /ko -->
+                    <!-- ko if:service_agent_phone() != '' -->
+                    <div class="button nl-field-icon" data-bind="dxButton: { icon: 'tel', clickAction: callMe }"></div>
+                    <!-- /ko -->
+                </div>
+            </div>
+            <div class="resource_ribbon">
+	            <div class="resource_title" data-bind="text: property_name"></div>
+                <div class="resource_icon home-clock home-icon"></div>
+	            <!-- ko if:address_line_1() != 'Unknown' -->
+	            <div class="contact_title" data-bind="text: address_line_1"></div>
+	            <!-- /ko -->
+	            <!-- ko if:address_line_2() != 'Unknown' -->
+				<div class="contact_title" data-bind="text: address_line_2"></div>
+				<!-- /ko -->
+				<!-- ko if:city_country() != 'Unknown' && city_country() != '' -->
+	            <div class="contact_title" data-bind="text: city_country()"></div>
+	            <!-- /ko -->
+                <!-- ko if:property_phone() != '' -->
+                <div class="contact_title" data-bind="text:property_phone()"></div>
+                <!-- /ko -->
+	        </div>
+	        <div id="housing_map" data-bind="dxMap: options"></div>
+	        <div class="dx-fieldset nl-fieldset">
+	        	<div class="ribbon">Your housing details...</div>
+	            <div class="dx-field">
+	            	<div class="dx-field-icon"><img src="img/Calendar.png" /></div>
+	                <div class="dx-field-label">Move In:</div>
+	                <div class="dx-field-value" data-bind="text:move_in"></div>
+	            </div>
+	            <div class="dx-field">
+	            	<div class="dx-field-icon"><img src="img/Calendar.png" /></div>
+	                <div class="dx-field-label">Move Out:</div>
+	                <div class="dx-field-value" data-bind="text:move_out"></div>
+	            </div>
+                <!-- ko if:lockbox() != '' -->
+	            <div class="dx-field">
+	            	<div class="dx-field-icon nl-field-icon-lock"><img src="img/lock@2x.png" /></div>
+	                <div class="dx-field-label">Lockbox:</div>
+	                <div class="dx-field-value" data-bind="text:lockbox"></div>
+	            </div>
+                <!-- /ko -->
+                <!-- ko if:mailbox() != '' -->
+	            <div class="dx-field">
+	            	<div class="dx-field-icon nl-field-icon-mailbox"><img src="img/mailbox@2x.png" /></div>
+	                <div class="dx-field-label">Mailbox:</div>
+	                <div class="dx-field-value" data-bind="text:mailbox"></div>
+	            </div>
+                <!-- /ko -->
+                <!-- ko if:gate_code() != '' -->
+                <div class="dx-field">
+	            	<div class="dx-field-icon"><img src="img/Keypad@2x.png" /></div>
+	                <div class="dx-field-label">Gate Code:</div>
+	                <div class="dx-field-value" data-bind="text:gate_code"></div>
+	            </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div data-options="dxView : { name: 'housinglist', title: 'Temporary Housing' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div class="housinglist_view noborder" data-bind="dxList: { dataSource: housingorders, pullRefreshEnabled: true }">
+           <div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#housing/{housing_id}'" class="nl-list-item" >
+                <div class="resource_icon home-clock"></div>
+                <div class="nl-list-item-title" data-bind="text: $data.property_name"></div>
+<!--                <div class="nl-list-item-subtitle">Dates: -->
+                    <div class="nl-housing-list-item-text" data-bind="text: $data.dates"></div>
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>

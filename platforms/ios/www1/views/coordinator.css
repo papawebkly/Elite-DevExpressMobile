@@ -1,0 +1,69 @@
+#contact_header {
+    display: inline-block;
+    width: 100%;
+    font-family: lato-regular, sans-serif;
+}
+
+#contact_name {
+    color: #46166B;
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+#contact_title {
+    line-height: 24px;
+    color: #4F6F19;
+    font-size: 14px;
+}
+
+#contact_header img {
+    border-style: solid;
+}
+
+.dx-theme-ios7 .coordinator_view .wide-field {
+	width: 95% !important;
+    font-size: 14px;
+}
+
+.dx-theme-ios7 .coordinator_view .dx-scrollview-content .right-btns.dx-widget {
+	margin-top: -30px;
+    margin-right: 5px;
+	padding-bottom: 10px;
+	float: right;
+}
+.coordinator_view .address{
+	margin-bottom: 20px;
+	float: left;
+	width: 80%;	
+	margin: 0;
+}
+	.coordinator_view .address .address-wrapper{
+		margin: 5px 0 0 10px;
+	}
+.dx-theme-ios7 .coordinator_view .dx-button .dx-button-content .dx-icon.dx-icon-add{
+	margin-top: 35px;
+	background: url(../img/Add.png) no-repeat;
+	width: 25px;
+	height: 25px;
+}
+.dx-theme-ios7 .dx-fieldset.coordinator-ribbon{
+	border-bottom: none;
+	margin-bottom: 5px;
+}
+
+.dx-icon-calendar {
+	background: url(../img/Calendar.png) center no-repeat;
+}
+.coordinator_view .avatar {
+	margin: 10px 10px 0;
+}
+.coordinator_view .button:last-child{
+	margin-bottom: 25px;
+}
+.dx-icon-addcontact {
+	background: url(../img/Add.png) no-repeat;
+}
+.dx-icon-picupload{
+	background: url(../img/Upload@2x.png) no-repeat;
+	width: 20px !important;
+}

@@ -1,0 +1,112 @@
+#nl-fieldset {
+    margin-top: 20px !important;
+}
+.dx-theme-ios.dx-version-major-7 .dx-tabs .dx-tab.dx-tab-selected {
+	background: #46116B;
+}
+.dx-theme-ios.dx-version-major-7 .dx-tabs .dx-tab {
+	border-color: #46116B;
+}
+
+.dx-theme-ios.dx-version-major-7 .dx-tabs .dx-tab .dx-tab-text,
+.dx-theme-ios.dx-version-major-7 .dx-tabs .dx-tab.dx-state-active .dx-tab-text {
+	color: #46116B;
+}
+
+.dx-theme-ios.dx-version-major-7 .dx-tabs .dx-tab.dx-tab-selected .dx-tab-text {
+	color: white;
+}
+.dx-theme-ios.dx-version-major-7 .dx-tabs .dx-tab:last-child {
+	border-right-color: #46116B;
+}
+.service_header.ground-shipment{
+	line-height: 25px;
+	background-color: white;
+	
+    height: 120px;
+	/*height: 154px;*/
+	overflow: hidden;	
+}
+.ground-shipment img {
+	/*opacity: 0.75;*/
+}
+.ground-shipment .service_name {
+	position: absolute;
+	color: #46166B;
+	z-index: 1;
+	margin: 12px 0 0 50px;
+	font-size: 18px;
+}
+.ground-shipment .ground-icon{
+	position: absolute;
+	z-index: 1;
+	width: 30px;
+	height: 21px;
+	margin-top: 14px;
+	margin-left: 12px;
+	opacity: 1;
+}
+.ground-shipment .resource_card{
+	height: 90px;
+	position: absolute;
+	background: white;
+	z-index: 1;
+	width: 100%;
+	margin-top: 15px; /*45px;*/
+	padding-left: 0;
+}
+.ground-shipment .avatar-mini{
+	width: 50px;
+	margin: 0 15px;
+}
+.ground-shipment .resource_title {
+	padding: 0 0 5px 2px;
+	line-height: 30px;
+	margin-left: 15px;
+}
+
+.service_header img.ground_bg {
+	height: auto;
+}
+.dx-theme-ios.dx-version-major-7 .dx-tabs .dx-tab:first-child {
+	border-radius: 4px 0 0 4px;
+}
+.dx-theme-ios.dx-version-major-7 .dx-tabs .dx-tab:last-child {
+	border-radius: 0 4px 4px 0;
+}
+#shipment_tabs {
+	background: white;
+	border-bottom: 1px solid #cccccc;
+}
+.dx-theme-ios.dx-version-major-7 .shipment_dates {
+	padding-bottom: 105px;
+}
+.dx-theme-ios.dx-version-major-7 .shipment_dates .dx-field-label {
+	width: 35%;
+}
+.dx-theme-ios.dx-version-major-7 .shipment_dates .dx-field-value {
+	width: 65%;
+	margin-top: 8px;
+    padding-right: 7px;
+	padding-bottom: 7px;
+	text-align: right;
+}
+.resource_desc {
+	color: #4E7012;
+	font-size: 14px;
+}
+.resource_card .contact-btn {
+	float: right;
+	margin-top: -55px;
+	margin-right: 5px;
+	padding-bottom: 10px;
+}
+.dx-theme-ios.dx-version-major-7 .dx-button .dx-button-content .dx-icon.dx-icon-calendar{
+	width: 27px;
+}
+.dx-theme-ios.dx-version-major-7 #shipmentdetail_page .dx-field-value{
+	font-size: 16px;
+}
+#shipment_addeventbtn{
+	display: none;
+}

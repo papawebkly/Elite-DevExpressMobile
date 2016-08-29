@@ -1,0 +1,20 @@
+<div data-options="dxView : { name: 'experienceslist', title: 'Experience Feedback'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+    	<div data-bind="dxList: { dataSource: experiencesslist_data, pullRefreshEnabled: true }">
+        	<div data-options="dxTemplate : { name: 'item' } " data-bind="dxAction: '#experienceedit/{id}'" class="nl-list-item" >
+        		<div class="left" style="display: inline-block;">
+					<!-- ko if: $data.rating == "DOWN" -->
+						<img src="img/new/fbad.png" width="50" />
+					<!-- /ko -->				   
+					<!-- ko if: $data.rating != "DOWN" -->
+						<img src="img/new/fgood.png" width="50" />
+					<!-- /ko -->
+				</div>
+        		<div class="infors" style="display: inline-block; width:70%">
+	        		<div class="info-row" style="color: #4f6f19; font-size: 14px;" data-bind="text: $data.experience_category_name"></div>
+	        		<div class="info-row" style="color: gray; font-size: 14px; white-space: normal" data-bind="text: $data.comment"></div>
+        		</div>
+        	</div>
+    	</div>
+ 	</div>
+</div>

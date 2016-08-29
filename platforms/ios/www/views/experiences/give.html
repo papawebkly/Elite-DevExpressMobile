@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'givefeedback', title: 'Give Feedback' } ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="experincesedit_view iconSet-container" data-bind="dxScrollView: { }">
+	        <div class="dx-fieldset">
+	        	<div class="dx-field">
+		        	<center>
+					<!-- ko if:thumbs_opt() == 0 -->
+						<img src="img/new/fbad2.png" width="60" />
+					<!-- /ko -->				   
+					<!-- ko if:thumbs_opt() == 1 -->
+						<img src="img/new/fgood2.png" width="60" />
+					<!-- /ko -->
+					</center>
+	        	</div>
+				<div class="dx-field">
+					<div class="dx-field-label">Category:</div>
+					<div class="dx-field-value" data-bind="dxSelectBox: { dataSource: experienceCategories, value: experience_category_id, displayValue: experience_category, valueExpr: 'id', displayExpr: 'name', title: 'Experience Categories', placeholder: 'Select...' }"></div>
+				</div>	
+				<div class="dx-field">
+					<div class="dx-field-label">Comment:</div>
+					<div class="dx-field-value" data-bind=" dxTextArea: { value: comment_text, height: '200px' }"></div>  
+				</div>	 
+			</div>
+			<!--div class="separation-bar"></div>
+			<center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' Save ', onClick: saveComment, visible: 1}"></div>
+			</center-->
+		</div>
+    </div>
+</div>

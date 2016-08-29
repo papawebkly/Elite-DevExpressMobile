@@ -1,0 +1,27 @@
+.infors{
+	margin-left: 10px;
+	float: left;
+}
+.thumbs_updown a{
+	color: #111111;
+	font-weight: bold;
+}
+	.thumbs_updown a img {
+		border: 5px solid white;
+		border-radius: 50%;
+		border-style: solid !important;
+	}
+	.thumbs_updown a.left.UP, .thumbs_updown a.right.DOWN {
+		color: #0a69ff !important;
+	}
+	.thumbs_updown a.left.UP img, .thumbs_updown a.right.DOWN img {
+		border: 5px solid #0a69ff;
+	}
+    
+#experienceedit_editbtn{
+    display: none;
+}
+
+.dx-field-value.not-editable{
+    padding-top: 8px !important;
+}

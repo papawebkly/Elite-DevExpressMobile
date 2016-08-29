@@ -1,0 +1,11 @@
+{
+    "ImageIO.framework": 1,
+    "CoreLocation.framework": 3,
+    "AVFoundation.framework": 1,
+    "MessageUI.framework": 1,
+    "EventKit.framework": 1,
+    "EventKitUI.framework": 1,
+    "AddressBook.framework": 1,
+    "AddressBookUI.framework": 1,
+    "AudioToolbox.framework": 1
+}

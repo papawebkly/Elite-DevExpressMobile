@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'experiencedetail', title: 'Feedback'} ">
+    <div data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="login_view iconSet-container" data-bind="dxScrollView: { }">
+        	<div class="dx-fieldset">
+        		<div class="dx-field">
+        			<center>
+					<!-- ko if: rating == "DOWN" -->
+						<img src="img/thumbs_down.png" width="50" />
+					<!-- /ko -->				   
+					<!-- ko if: rating != "DOWN" -->
+						<img src="img/thumbs_up.png" width="50" />
+					<!-- /ko -->
+        			</center>
+        		</div>
+                <div class="dx-field">
+					<div class="dx-field-label">Category:</div>    
+					<div class="dx-field-value" data-bind=" dxTextBox: { value: experience_category_id, readOnly: readonly }"></div>  
+				</div>        		
+                <div class="dx-field">
+					<div class="dx-field-label">Comment:</div>    
+					<div class="dx-field-value" data-bind=" dxTextArea: { value: comment, rows: 'auto', readOnly: readonly }"></div>  
+				</div>        		
+        	</div>
+        	<div class="separation-bar"></div>
+			<center class="elite-btnwrapper">
+				<div class="elite-newbtn" data-bind="dxButton: { text: ' Save ', clickAction: saveComment, visible: updatable}"></div>
+			</center>        	
+        </div>
+    </div>
+</div>
